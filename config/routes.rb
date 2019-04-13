@@ -4,6 +4,16 @@ Rails.application.routes.draw do
 
 root 'public/users#top'
 
-resources :users
+
+namespace :admin do
+  resources :users
+  resources :shops
+end
+
+namespace :public do
+  resources :users
+end
+
+
 
 end
