@@ -1,0 +1,23 @@
+<div class="container">
+<h2 class="form-header-title">CD新規登録</h2>
+  <div class="form-body">
+  <%= form_for(@cd) do |f| %>
+  <div class="form-group has-icon">
+    <label class="image">ジャケット画像</label>
+    <%= f.attachment_field :image, class:"cd_image" %>
+    <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
+  </div>
+  <div class="form-group has-icon">
+    <label class="name">アルバム名</label>
+    <%= f.text_field :cd_name, autofocus: true, class:"cd_name"%>
+    <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
+  </div>
+  <div class="form-group has-icon">
+    <label class="introduction">アーティスト名</label>
+    <%= f.text_area :name, autofocus: true, class:"name" %>
+    <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
+  </div>
+    <%= f.submit "商品登録", class:"create_cd" %>
+  <% end %>
+</div>
+</div>
