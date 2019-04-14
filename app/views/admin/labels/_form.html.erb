@@ -1,0 +1,9 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+   <h2>レーベル名登録</h2>
+   <%= form_for(@label, url: new_admin_label_path, remote: true) do |f| %>
+   <%= f.text_field :name, class:"label_name col-xs-12" %>
+   <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+   <% end %>
+  </div>
+</div>

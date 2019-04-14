@@ -11,7 +11,8 @@
 		<label>単価</label><br>
 			<%= f.text_field :price, class:"price col-xs-12" %>円<br>
 		<label>レーベル</label><br>
-            <%= f.text_field :label_id, class:"lebel_id col-xs-12" %><br>
+            <%= link_to "新規登録", new_admin_label_path, remote: true, class:"new_lebel btn-sm btn-success" %><br>
+            <div id="cd-modal" class="modal fade" tabindex="" abindex="-1" role="dialog" aria-hidden="true"></div>
 		<label>CDジャンル</label><br>
             <%= link_to "新規登録", new_admin_genre_path, remote: true, class:"new_genre btn-sm btn-success" %><br>
             <div id="cd-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
@@ -23,7 +24,6 @@
             
 		<label>在庫数</label><br>
 			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
-
+            
 	<% end %>
-</h2>
-
+</div>

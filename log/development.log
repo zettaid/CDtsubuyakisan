@@ -1777,3 +1777,320 @@ Processing by Admin::ArtistsController#new as JS
 Completed 200 OK in 1315ms (Views: 830.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:14:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 3192ms (Views: 3095.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-14 05:14:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.1ms)
+  Rendered admin/genres/new.js.erb (334.4ms)
+Completed 200 OK in 946ms (Views: 659.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:14:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1227ms (Views: 851.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:14:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1139ms (Views: 863.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:14:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as HTML
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 814ms (Views: 730.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:14:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1025ms (Views: 717.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:14:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1165ms (Views: 803.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:16:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 2990ms (Views: 2906.6ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:16:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1134ms (Views: 743.8ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:17:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1403ms (Views: 852.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:17:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.html.erb within layouts/application
+  Rendered admin/artists/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1328ms (Views: 976.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:19:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 678ms (Views: 635.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:19:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (1.0ms)
+  Rendered admin/artists/new.js.erb (315.5ms)
+Completed 200 OK in 1147ms (Views: 761.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:25:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (217.5ms)
+Completed 500 Internal Server Error in 352ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_admin_lebel_path' for #<#<Class:0x00007fe694b95988>:0x00007fe694ba3b00>):
+    11: 		<label>単価</label><br>
+    12: 			<%= f.text_field :price, class:"price col-xs-12" %>円<br>
+    13: 		<label>レーベル</label><br>
+    14:             <%= link_to "新規登録", new_admin_lebel_path, remote: true, class:"new_lebel btn-sm btn-success" %><br>
+    15:             <div id="cd-modal" class="modal fade" tabindex="" abindex="-1" role="dialog" aria-hidden="true"></div>
+    16: 		<label>CDジャンル</label><br>
+    17:             <%= link_to "新規登録", new_admin_genre_path, remote: true, class:"new_genre btn-sm btn-success" %><br>
+  
+app/views/admin/cds/new.html.erb:14:in `block in _app_views_admin_cds_new_html_erb___1019433632956161440_70314157192060'
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb___1019433632956161440_70314157192060'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:27:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 2849ms (Views: 2776.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 05:28:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (416.1ms)
+  Rendered admin/labels/new.js.erb (744.6ms)
+Completed 500 Internal Server Error in 1444ms (ActiveRecord: 8.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>レーベル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_label_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"label_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/labels/_form.html.erb:4:in `_app_views_admin_labels__form_html_erb__3131512672100561855_70188490273720'
+app/views/admin/labels/new.js.erb:1:in `_app_views_admin_labels_new_js_erb__3003967740623608561_70188490198920'
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 05:28:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (336.9ms)
+  Rendered admin/labels/new.js.erb (644.4ms)
+Completed 500 Internal Server Error in 1283ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>レーベル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_label_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"label_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/labels/_form.html.erb:4:in `_app_views_admin_labels__form_html_erb__3131512672100561855_70188545799040'
+app/views/admin/labels/new.js.erb:1:in `_app_views_admin_labels_new_js_erb__3003967740623608561_70188489831380'
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 05:28:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-14 05:28:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered admin/labels/_form.html.erb (338.0ms)
+  Rendered admin/labels/new.js.erb (657.8ms)
+Completed 500 Internal Server Error in 1264ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>レーベル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_label_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"label_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/labels/_form.html.erb:4:in `_app_views_admin_labels__form_html_erb__3131512672100561855_70188525195420'
+app/views/admin/labels/new.js.erb:1:in `_app_views_admin_labels_new_js_erb__3003967740623608561_70188528582120'
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (1.4ms)
+  Rendered admin/artists/new.js.erb (279.5ms)
+Completed 200 OK in 936ms (Views: 594.5ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 05:28:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (366.4ms)
+  Rendered admin/labels/new.js.erb (697.5ms)
+Completed 500 Internal Server Error in 1285ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>レーベル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_label_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"label_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/labels/_form.html.erb:4:in `_app_views_admin_labels__form_html_erb__3131512672100561855_70188540609920'
+app/views/admin/labels/new.js.erb:1:in `_app_views_admin_labels_new_js_erb__3003967740623608561_70188540672000'
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 05:28:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as HTML
+  Rendering admin/labels/new.html.erb within layouts/application
+  Rendered admin/labels/new.html.erb within layouts/application (41.8ms)
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>レーベル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_label_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"label_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/labels/new.html.erb:4:in `_app_views_admin_labels_new_html_erb___1449234587794290299_70188490195480'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:29:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 583ms (Views: 534.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 05:29:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (1.2ms)
+  Rendered admin/labels/new.js.erb (247.4ms)
+Completed 200 OK in 990ms (Views: 627.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:33:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (217.9ms)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cd' for #<#<Class:0x00007fac14cc20a0>:0x00007fac10256840>):
+    24:             
+    25: 		<label>在庫数</label><br>
+    26: 			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
+    27:             <%= f.submit class:"create_cd_#{cd.id} btn btn-primary col-xs-12" %>
+    28: 	<% end %>
+    29: </h2>
+  
+app/views/admin/cds/new.html.erb:27:in `block in _app_views_admin_cds_new_html_erb___2849270314723623432_70188490995900'
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb___2849270314723623432_70188490995900'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:37:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 787ms (Views: 747.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds" for 10.0.2.2 at 2019-04-14 05:37:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `gsub' for nil:NilClass):
+  
+app/models/cd.rb:3:in `block in <class:Cd>'
+app/controllers/admin/cds_controller.rb:3:in `index'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 05:39:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 789ms (Views: 752.6ms | ActiveRecord: 0.0ms)
+
+

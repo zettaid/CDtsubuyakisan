@@ -15,6 +15,7 @@ class Admin::CdsController < ApplicationController
   end
 
   def edit
+    @cd = Cd.find(params[:id])
   end
 
   def update

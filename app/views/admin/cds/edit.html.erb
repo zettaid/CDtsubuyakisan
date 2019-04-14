@@ -1,2 +1,29 @@
-<h1>Admin::Cds#edit</h1>
-<p>Find me in app/views/admin/cds/edit.html.erb</p>
+<div class="container">
+    <%= form_for(@cd, url: new_admin_cd_path) do |f| %>
+	<h2>CD情報編集<h2>
+        <label>CDジャケット画像</label><br>
+
+        <label>アルバム/シングル名</label><br>
+			<%= f.text_field :cd_name, class:"cd_name col-xs-12" %><br>
+		<label>アーティスト名</label><br>
+            <%= link_to "新規登録", new_admin_artist_path, remote: true, class:"new_artist btn-sm btn-success" %><br>
+            <div id="cd-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+		<label>単価</label><br>
+			<%= f.text_field :price, class:"price col-xs-12" %>円<br>
+		<label>レーベル</label><br>
+            <%= link_to "新規登録", new_admin_label_path, remote: true, class:"new_lebel btn-sm btn-success" %><br>
+            <div id="cd-modal" class="modal fade" tabindex="" abindex="-1" role="dialog" aria-hidden="true"></div>
+		<label>CDジャンル</label><br>
+            <%= link_to "新規登録", new_admin_genre_path, remote: true, class:"new_genre btn-sm btn-success" %><br>
+            <div id="cd-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+		<label>Disk番号</label><br>
+            
+		<label>曲順</label><br>
+            
+		<label>曲名</label><br>
+            
+		<label>在庫数</label><br>
+			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
+            
+	<% end %>
+</div>

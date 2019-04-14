@@ -5,7 +5,17 @@ class Admin::LabelsController < ApplicationController
 
   def create
   	@label = Label.new(label_params)
-  	@label.save
+  	respond_to do |format|
+      if @lebel.save
+        format.html { redirect_to @lebel, notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @label }
+        format.js { @status = "success"}
+      else
+        format.html { render :new }
+        format.json { render json: @label.errors, status: :unprocessable_entity }
+        format.js { @status = "fail" }
+      end
+    end
   end
 
   def edit
