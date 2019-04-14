@@ -1,0 +1,8 @@
+<div id="nav-search">
+    <%= form_tag '/', :method => 'get' do %>
+        <p>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "検索", :cd_name => nil %>
+        </p>
+    <% end %>
+</div>

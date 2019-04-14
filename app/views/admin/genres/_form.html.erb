@@ -1,0 +1,9 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+   <h2>ジャンル名登録</h2>
+   <%= form_for(@genre, url: new_admin_genre_path, remote: true) do |f| %>
+   <%= f.text_field :name, class:"genre_name col-xs-12" %>
+   <%= f.submit "新規登録", class:"create_genre_#{@genre.id} btn btn-primary col-xs-12" %>
+   <% end %>
+  </div>
+</div>
