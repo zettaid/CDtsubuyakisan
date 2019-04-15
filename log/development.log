@@ -2094,3 +2094,107 @@ Processing by Admin::CdsController#new as HTML
 Completed 200 OK in 789ms (Views: 752.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/admin/cds" for 10.0.2.2 at 2019-04-14 06:45:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `gsub' for nil:NilClass):
+  
+app/models/cd.rb:3:in `block in <class:Cd>'
+app/controllers/admin/cds_controller.rb:3:in `index'
+Started GET "/admin/cds" for 10.0.2.2 at 2019-04-14 06:53:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#index as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/CDtsubuyakisan/app/models/cd.rb:14: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/cd.rb:14: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/admin/cds_controller.rb:3:in `index'
+Started GET "/admin/cds" for 10.0.2.2 at 2019-04-14 06:54:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#index as HTML
+  Rendering admin/cds/index.html.erb within layouts/application
+  Rendered admin/cds/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2741ms (Views: 2672.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=%E9%AD%94%E7%8E%8B&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2019-04-14 06:54:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"魔王", "commit"=>"検索"}
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/public/cds" for 10.0.2.2 at 2019-04-14 07:00:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::CdsController#index as HTML
+  Rendering public/cds/index.html.erb within layouts/application
+  Rendered public/cds/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2305ms (Views: 2256.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-14 07:23:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 2583ms (Views: 2523.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-14 07:23:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (1.1ms)
+  Rendered admin/labels/new.js.erb (286.2ms)
+Completed 200 OK in 969ms (Views: 645.8ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-14 07:23:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
