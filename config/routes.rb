@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :admin do
     resources :cds do
     end
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :users
+  resources :shops
   end
   namespace :public do
     resources :cds do
@@ -25,6 +28,7 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :users
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
