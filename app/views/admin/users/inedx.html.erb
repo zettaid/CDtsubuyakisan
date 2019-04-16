@@ -1,0 +1,18 @@
+<p>ユーザー検索</p>
+		<%= form_tag(users_path, :method => 'get' ) do %>
+  				<%= text_field_tag :search %>
+  				<%= submit_tag '検索', :name => nil %>
+		<% end %>
+
+		<% @user.each do |user| %>
+		        <%= user.username %>
+		        <%= link_to 'show' , user_path(user.id), class: "user_#{user.id}" %>
+		<% end %>
+
+		<% if @book.user == current_user %>
+        		<%= link_to "Edit", edit_users_path(@user.id), class: "edit_#{@user.id}" %>
+        <% end %>
+
+        <% if @book.user == current_user %>
+        	   <%= link_to "Destroy", user_path(@user.id), class: "destroy_#{@user.id}", method: :delete, "data-confirm" => "本当に消しますか？" %>
+        <% end %>
