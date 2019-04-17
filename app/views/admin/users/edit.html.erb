@@ -1,1 +1,59 @@
-e
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @user.errors.count %>Error</h2>
+      <ul>
+
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+         <div class="container"> <!-- ここを追加 -->
+    <div class="row">   <!-- ここを追加 -->
+    
+          <div class="col-lg-1">
+
+          </div>
+
+                  <div class="col-lg-11">
+
+                                <h2 class="form-header-title">User info</h2>
+                            
+                            
+                              <%= form_for @user, url: admin_user_path do |f| %>
+                               
+                               <div style="display:inline-flex"><b>Name</b>
+                                  <%= f.text_field :first_name, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"名前"%>
+                                   </div>
+                                     <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
+                             
+
+                                  <p><b>Image</b></p>
+                                
+                                 <label class="control-label sr-only" for="inputEmail">ProfileImage</label>
+                              
+                               
+                               <br>
+
+
+                               <label class="control-label sr-only" for="inputEmail">Name</label>
+
+                               <br>
+                               
+                               <div style="display:inline-flex">
+                                <br>
+
+                                <b>Introduction</b>
+                                  <%= f.text_area :address, autofocus: true, class:"form-control address", id:"inputAddress", placeholder:"address"%>
+                                </div>
+                                <br>
+
+
+                            <br>
+                            <%= f.submit 'Update User',class: 'btn btn-default col-lg-2' %>
+                            <% end %>
+      </div>
+
+  </div>
+</div>
