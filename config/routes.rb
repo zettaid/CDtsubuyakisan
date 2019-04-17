@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :genres do
     end
   end
+
   namespace :public do
     resources :cds do
       collection do

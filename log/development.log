@@ -2198,3 +2198,2432 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 01:45:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 4092ms (Views: 4031.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 01:46:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (1.4ms)
+  Rendered admin/artists/new.js.erb (343.5ms)
+Completed 200 OK in 1102ms (Views: 722.3ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 01:47:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 01:53:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 2552ms (Views: 2471.5ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 01:53:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.1ms)
+  Rendered admin/genres/new.js.erb (316.6ms)
+Completed 200 OK in 1072ms (Views: 735.2ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 01:54:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:00:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (8.8ms)
+  Rendered admin/genres/new.js.erb (294.7ms)
+Completed 200 OK in 960ms (Views: 638.7ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:00:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:05:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 3338ms (Views: 3270.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:05:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.3ms)
+  Rendered admin/genres/new.js.erb (375.0ms)
+Completed 200 OK in 1404ms (Views: 1069.2ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:05:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:20:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 2717ms (Views: 2640.2ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:20:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (559.5ms)
+  Rendered admin/genres/new.js.erb (828.4ms)
+Completed 500 Internal Server Error in 1759ms (ActiveRecord: 6.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `create_admin_genre_path' for #<#<Class:0x00007fdc04189fb0>:0x00007fdc04188480>):
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", url: create_admin_genre_path, class:"create_genre_#{@genre.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+    8:   </div>
+    9: </div>
+  
+app/views/admin/genres/_form.html.erb:6:in `block in _app_views_admin_genres__form_html_erb___2644169067371667743_70291469196180'
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb___2644169067371667743_70291469196180'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb___1884645919234389030_70291469129060'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:20:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (503.5ms)
+  Rendered admin/genres/new.js.erb (787.3ms)
+Completed 500 Internal Server Error in 1417ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `create_admin_genre_path' for #<#<Class:0x00007fdc04189fb0>:0x00007fdc128e6cf0>):
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", url: create_admin_genre_path, class:"create_genre_#{@genre.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+    8:   </div>
+    9: </div>
+  
+app/views/admin/genres/_form.html.erb:6:in `block in _app_views_admin_genres__form_html_erb___2644169067371667743_70291590334920'
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb___2644169067371667743_70291590334920'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb___1884645919234389030_70291590429840'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:20:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as HTML
+  Rendering admin/genres/new.html.erb within layouts/application
+  Rendered admin/genres/new.html.erb within layouts/application (253.6ms)
+Completed 500 Internal Server Error in 460ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `create_admin_genre_path' for #<#<Class:0x00007fdc04189fb0>:0x00007fdc12ae0c68>):
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: new_admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", url: create_admin_genre_path, class:"create_genre_#{@genre.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+    8:   </div>
+    9: </div>
+  
+app/views/admin/genres/new.html.erb:6:in `block in _app_views_admin_genres_new_html_erb__1976588624123197618_70291591465860'
+app/views/admin/genres/new.html.erb:4:in `_app_views_admin_genres_new_html_erb__1976588624123197618_70291591465860'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:21:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 562ms (Views: 518.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:21:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.2ms)
+  Rendered admin/genres/new.js.erb (287.4ms)
+Completed 200 OK in 982ms (Views: 620.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:21:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:23:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 2612ms (Views: 2553.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:23:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.2ms)
+  Rendered admin/genres/new.js.erb (320.1ms)
+Completed 200 OK in 977ms (Views: 678.6ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:24:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:24:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 658ms (Views: 613.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:24:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (485.0ms)
+  Rendered admin/genres/new.js.erb (897.7ms)
+Completed 500 Internal Server Error in 1738ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `genre' for #<#<Class:0x00007f58e01864c0>:0x00007f58f6993288>):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(genre, url: new_admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_genre_#{@genre.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb___3603267479071853167_70010035497960'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb__2288281349096610816_70010035543920'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:24:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (598.3ms)
+  Rendered admin/genres/new.js.erb (943.2ms)
+Completed 500 Internal Server Error in 1566ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `genre' for #<#<Class:0x00007f58e01864c0>:0x00007f58f5bf3e20>):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(genre, url: new_admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_genre_#{@genre.id} btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb___3603267479071853167_70010028863540'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb__2288281349096610816_70010028445300'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 02:24:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (0.9ms)
+  Rendered admin/genres/new.js.erb (313.3ms)
+Completed 200 OK in 951ms (Views: 642.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:24:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 584ms (Views: 542.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:26:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 724ms (Views: 675.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:27:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 553ms (Views: 504.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:28:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (210.0ms)
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cd' for #<#<Class:0x00007f58f4cc45f8>:0x00007f58f5cd67e8>):
+    24:             
+    25: 		<label>在庫数</label><br>
+    26: 			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
+    27:             <%= f.submit class:"create_cd_#{cd.id} btn btn-primary col-xs-12" %>
+    28: 	<% end %>
+    29: </div>
+  
+app/views/admin/cds/new.html.erb:27:in `block in _app_views_admin_cds_new_html_erb___920648737451081278_70010028865680'
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb___920648737451081278_70010028865680'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:28:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:27: syntax error, unexpected keyword_class, expecting ')'
+...( f.submit "新規登録" class:"create_cd_#{cd.id} btn btn-...
+...                          ^~~~~
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:27: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...d} btn btn-primary col-xs-12" );@output_buffer.safe_append='
+...                              ^
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	 ^~~
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/cds/new.html.erb:27: syntax error, unexpected keyword_class, expecting ')'
+app/views/admin/cds/new.html.erb:27: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/admin/cds/new.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+app/views/admin/cds/new.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/admin/cds/new.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:29:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (357.7ms)
+Completed 500 Internal Server Error in 494ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cd' for #<#<Class:0x00007f58f4cc45f8>:0x00007f58f550e808>):
+    24:             
+    25: 		<label>在庫数</label><br>
+    26: 			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
+    27:             <%= f.submit "新規登録", class:"create_cd_#{cd.id} btn btn-primary col-xs-12" %>
+    28: 	<% end %>
+    29: </div>
+  
+app/views/admin/cds/new.html.erb:27:in `block in _app_views_admin_cds_new_html_erb___920648737451081278_70010024787880'
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb___920648737451081278_70010024787880'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 02:33:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (289.1ms)
+Completed 500 Internal Server Error in 453ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cd' for #<#<Class:0x00007f58f4cc45f8>:0x00007f58f60cca50>):
+    24:             
+    25: 		<label>在庫数</label><br>
+    26: 			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
+    27:             <%= f.submit "新規登録", class:"create_admin_cd_#{cd.id} btn btn-primary col-xs-12" %>
+    28: 	<% end %>
+    29: </div>
+  
+app/views/admin/cds/new.html.erb:27:in `block in _app_views_admin_cds_new_html_erb___920648737451081278_70010030942780'
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb___920648737451081278_70010030942780'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:18:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 3421ms (Views: 3340.9ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 04:19:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (1.0ms)
+  Rendered admin/artists/new.js.erb (325.5ms)
+Completed 200 OK in 1061ms (Views: 690.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:19:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.2ms)
+  Rendered admin/genres/new.js.erb (333.8ms)
+Completed 200 OK in 1054ms (Views: 712.2ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:19:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:23:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 3047ms (Views: 2984.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:23:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (333.7ms)
+  Rendered admin/genres/new.js.erb (638.5ms)
+Completed 500 Internal Server Error in 2134ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/genres"}, missing required keys: [:id]):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb__3620806433299509312_69815297857540'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb___892070254281464351_69815297782100'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:23:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (313.2ms)
+  Rendered admin/genres/new.js.erb (603.1ms)
+Completed 500 Internal Server Error in 1251ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/genres"}, missing required keys: [:id]):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb__3620806433299509312_69815453483740'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb___892070254281464351_69815453537980'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:23:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as HTML
+  Rendering admin/genres/new.html.erb within layouts/application
+  Rendered admin/genres/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1037ms (Views: 903.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:24:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as HTML
+  Rendering admin/genres/new.html.erb within layouts/application
+  Rendered admin/genres/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 768ms (Views: 676.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:24:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 562ms (Views: 518.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:24:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (242.6ms)
+  Rendered admin/genres/new.js.erb (491.5ms)
+Completed 500 Internal Server Error in 1033ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/genres"}, missing required keys: [:id]):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb__3620806433299509312_69815299543820'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb___892070254281464351_69815299630340'
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 04:24:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (1.2ms)
+  Rendered admin/artists/new.js.erb (247.8ms)
+Completed 200 OK in 796ms (Views: 532.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-15 04:24:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (1.3ms)
+  Rendered admin/labels/new.js.erb (233.6ms)
+Completed 200 OK in 774ms (Views: 525.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:24:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (264.1ms)
+  Rendered admin/genres/new.js.erb (512.2ms)
+Completed 500 Internal Server Error in 1068ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"admin/genres"}, missing required keys: [:id]):
+    1: <div class="modal-dialog">
+    2:   <div class="modal-content">
+    3:    <h2>ジャンル名登録</h2>
+    4:    <%= form_for(@genre, url: admin_genre_path, remote: true) do |f| %>
+    5:    <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    6:    <%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>
+    7:    <% end %>
+  
+app/views/admin/genres/_form.html.erb:4:in `_app_views_admin_genres__form_html_erb__3620806433299509312_69815439335140'
+app/views/admin/genres/new.js.erb:1:in `_app_views_admin_genres_new_js_erb___892070254281464351_69815442059580'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:25:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 654ms (Views: 604.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:25:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.1ms)
+  Rendered admin/genres/new.js.erb (269.0ms)
+Completed 200 OK in 862ms (Views: 574.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:25:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:26:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (0.9ms)
+  Rendered admin/genres/new.js.erb (272.3ms)
+Completed 200 OK in 849ms (Views: 577.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:50:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (25.7ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    17:             	<div class="modal-dialog">
+    18: 				  <div class="modal-content">
+    19: 				   <h2>ジャンル名登録</h2>
+    20: 				   <%= form_for(@genre, url: admin_genres_path, remote: true) do |f| %>
+    21: 				   <%= f.text_field :name, class:"genre_name col-xs-12" %>
+    22: 				   <%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>
+    23: 				   <% end %>
+  
+app/views/admin/cds/new.html.erb:20:in `block in _app_views_admin_cds_new_html_erb___2855284879726151241_69815297417120'
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb___2855284879726151241_69815297417120'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:50:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 2748ms (Views: 2661.4ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:50:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.0ms)
+  Rendered admin/genres/new.js.erb (294.0ms)
+Completed 200 OK in 868ms (Views: 587.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:54:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 622ms (Views: 577.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:54:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (0.9ms)
+  Rendered admin/genres/new.js.erb (261.2ms)
+Completed 200 OK in 844ms (Views: 553.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 04:56:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 536ms (Views: 495.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 04:56:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/_form.html.erb (1.0ms)
+  Rendered admin/genres/new.js.erb (260.0ms)
+Completed 200 OK in 818ms (Views: 546.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:11:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 2847ms (Views: 2745.0ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:11:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.4ms)
+Completed 200 OK in 599ms (Views: 310.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:12:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.5ms)
+Completed 200 OK in 660ms (Views: 344.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:12:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.3ms)
+Completed 200 OK in 597ms (Views: 309.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:12:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.4ms)
+Completed 200 OK in 697ms (Views: 336.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:12:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 911ms (Views: 853.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:12:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.4ms)
+Completed 200 OK in 653ms (Views: 332.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:13:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.4ms)
+Completed 200 OK in 629ms (Views: 329.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:13:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.3ms)
+Completed 200 OK in 842ms (Views: 435.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:13:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.3ms)
+Completed 200 OK in 737ms (Views: 399.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:13:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.4ms)
+Completed 200 OK in 852ms (Views: 403.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:13:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as HTML
+  Rendering admin/genres/new.html.erb within layouts/application
+  Rendered admin/genres/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 914ms (Views: 842.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/genres/new" for 10.0.2.2 at 2019-04-15 05:13:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#new as JS
+  Rendering admin/genres/new.js.erb
+  Rendered admin/genres/new.js.erb (0.6ms)
+Completed 200 OK in 684ms (Views: 357.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:15:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 646ms (Views: 602.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:15:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:19:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:15: syntax error, unexpected ')', expecting =>
+...success", id = "genre_bottun" );@output_buffer.safe_append='...
+...                              ^
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	 ^~~
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:47: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/vagrant/CDtsubuyakisan/app/views/admin/cds/new.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/cds/new.html.erb:15: syntax error, unexpected ')', expecting =>
+app/views/admin/cds/new.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+app/views/admin/cds/new.html.erb:47: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/admin/cds/new.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:20:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 717ms (Views: 664.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:25:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 752ms (Views: 705.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:26:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 669ms (Views: 625.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:26:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:26:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 675ms (Views: 623.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:26:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:27:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:28:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 696ms (Views: 645.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:28:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:29:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (17.1ms)
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:29:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:29:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 3504ms (Views: 3407.1ms | ActiveRecord: 14.7ms)
+
+
+Completed 200 OK in 819ms (Views: 778.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 05:30:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (1.2ms)
+  Rendered admin/artists/new.js.erb (321.9ms)
+Completed 200 OK in 991ms (Views: 685.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 05:30:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/_form.html.erb (0.9ms)
+  Rendered admin/artists/new.js.erb (288.7ms)
+Completed 200 OK in 935ms (Views: 624.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/labels/new" for 10.0.2.2 at 2019-04-15 05:30:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#new as JS
+  Rendering admin/labels/new.js.erb
+  Rendered admin/labels/_form.html.erb (1.2ms)
+  Rendered admin/labels/new.js.erb (288.2ms)
+Completed 200 OK in 935ms (Views: 643.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:38:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (201.2ms)
+Completed 500 Internal Server Error in 401ms (ActiveRecord: 25.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_admin_labels_path' for #<#<Class:0x00007f7d6cce53d8>:0x00007f7d6ccf3230>):
+    39: 	<div class="modal-dialog">
+    40: 	  <div class="modal-content">
+    41: 	   <h2>レーベル名登録</h2>
+    42: 	   <%= form_for(@label, url: new_admin_labels_path, remote: true) do |f| %>
+    43: 	   <%= f.text_field :name, class:"label_name col-xs-12" %>
+    44: 	   <%= f.submit "新規登録", class:"create_label_#{@label.id} btn btn-primary col-xs-12" %>
+    45: 	   <% end %>
+  
+app/views/admin/cds/new.html.erb:42:in `_app_views_admin_cds_new_html_erb__2384300009701620687_70088336552100'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:38:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 2981ms (Views: 2917.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:38:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 05:41:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/new.js.erb (0.3ms)
+Completed 200 OK in 604ms (Views: 332.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/artists/new" for 10.0.2.2 at 2019-04-15 05:41:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#new as JS
+  Rendering admin/artists/new.js.erb
+  Rendered admin/artists/new.js.erb (0.4ms)
+Completed 200 OK in 685ms (Views: 366.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:41:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:42:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:44:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 718ms (Views: 681.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:44:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:45:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/admin/cds/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:47:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 775ms (Views: 712.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:49:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 652ms (Views: 615.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 566ms (Views: 530.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:55:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 685ms (Views: 636.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 05:58:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 579ms (Views: 542.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:02:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 2674ms (Views: 2559.8ms | ActiveRecord: 22.8ms)
+
+
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:02:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.6.2) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:08:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 616ms (Views: 580.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:08:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mdCrRwolKI6F5nLP/96fOpJRs5iVpFrM79j8l1rMRL4zbK+UfQY5F3PcEa/Ww2sj3yihevxvIV2hfXrcK5EbgQ==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `genre_params' for #<Admin::GenresController:0x00007f796a98c6d8>):
+  
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:13:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mdCrRwolKI6F5nLP/96fOpJRs5iVpFrM79j8l1rMRL4zbK+UfQY5F3PcEa/Ww2sj3yihevxvIV2hfXrcK5EbgQ==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `genre_params' for #<Admin::GenresController:0x0000563810029ab0>):
+  
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:13:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mdCrRwolKI6F5nLP/96fOpJRs5iVpFrM79j8l1rMRL4zbK+UfQY5F3PcEa/Ww2sj3yihevxvIV2hfXrcK5EbgQ==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `genre_params' for #<Admin::GenresController:0x000056380f739018>):
+  
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:18:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mdCrRwolKI6F5nLP/96fOpJRs5iVpFrM79j8l1rMRL4zbK+UfQY5F3PcEa/Ww2sj3yihevxvIV2hfXrcK5EbgQ==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `genre_params' for #<Admin::GenresController:0x00007f9120c553b0>):
+  
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:22:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.6.2) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:24:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 3003ms (Views: 2888.7ms | ActiveRecord: 30.9ms)
+
+
+Started POST "/admin/labels" for 10.0.2.2 at 2019-04-15 06:24:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qGf1kBTZT6sccF4nWlVAkYyMrK/RMbpWYAyGyKU5P4kC2/FDY/peMupKPUdzSLSIwfW+Tbj6wccuqQCD1GRgtg==", "label"=>{"name"=>"I've"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `label_params' for #<Admin::LabelsController:0x00007f910c037290>):
+  
+app/controllers/admin/labels_controller.rb:7:in `create'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:24:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qGf1kBTZT6sccF4nWlVAkYyMrK/RMbpWYAyGyKU5P4kC2/FDY/peMupKPUdzSLSIwfW+Tbj6wccuqQCD1GRgtg==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `artist_params' for #<Admin::ArtistsController:0x00007f910573dd98>):
+  
+app/controllers/admin/artists_controller.rb:7:in `create'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:27:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qGf1kBTZT6sccF4nWlVAkYyMrK/RMbpWYAyGyKU5P4kC2/FDY/peMupKPUdzSLSIwfW+Tbj6wccuqQCD1GRgtg==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `artist_params' for #<Admin::ArtistsController:0x00007f910c17d5f0>):
+  
+app/controllers/admin/artists_controller.rb:7:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:31:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 3134ms (Views: 3006.4ms | ActiveRecord: 27.1ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:31:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4lp+WnjaN+hTaR8FottvYi8+f7Q02B4vcia9INA4R19I5nqJD/kmcaVTfGWLxpt7YkdtVl0TZb48gztroWUYYA==", "artist"=>{"name"=>""}, "commit"=>"新規登録"}
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `artist_params' for #<Admin::ArtistsController:0x00007effa8073560>):
+  
+app/controllers/admin/artists_controller.rb:7:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:32:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 3383ms (Views: 3155.5ms | ActiveRecord: 34.7ms)
+
+
+  [1m[36mArtist Load (3.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:36:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 3110ms (Views: 2970.1ms | ActiveRecord: 29.3ms)
+
+
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:36:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SuM5DWtH8UwJ8GGgThVfdm3MoYBiP6Fdo0Pj7+bwK9fl4g3Qo4OXMYdouaoJaFklM4gZGhDhRQ4KInEzsafkA==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/admin/genres_controller.rb:30:in `genre_params'
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:37:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SuM5DWtH8UwJ8GGgThVfdm3MoYBiP6Fdo0Pj7+bwK9fl4g3Qo4OXMYdouaoJaFklM4gZGhDhRQ4KInEzsafkA==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/admin/genres_controller.rb:30:in `genre_params'
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/genres" for 10.0.2.2 at 2019-04-15 06:37:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SuM5DWtH8UwJ8GGgThVfdm3MoYBiP6Fdo0Pj7+bwK9fl4g3Qo4OXMYdouaoJaFklM4gZGhDhRQ4KInEzsafkA==", "genre"=>{"name"=>"ロック"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/admin/genres_controller.rb:30:in `genre_params'
+app/controllers/admin/genres_controller.rb:7:in `create'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:38:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SuM5DWtH8UwJ8GGgThVfdm3MoYBiP6Fdo0Pj7+bwK9fl4g3Qo4OXMYdouaoJaFklM4gZGhDhRQ4KInEzsafkA==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/admin/artists_controller.rb:30:in `artist_params'
+app/controllers/admin/artists_controller.rb:7:in `create'
+Started POST "/admin/labels" for 10.0.2.2 at 2019-04-15 06:38:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LabelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SuM5DWtH8UwJ8GGgThVfdm3MoYBiP6Fdo0Pj7+bwK9fl4g3Qo4OXMYdouaoJaFklM4gZGhDhRQ4KInEzsafkA==", "label"=>{"name"=>"new"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/admin/labels_controller.rb:29:in `label_params'
+app/controllers/admin/labels_controller.rb:7:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:40:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.7ms)
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:41:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 3323ms (Views: 3214.7ms | ActiveRecord: 22.1ms)
+
+
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9SuM5DWtH8UwJ8GGgThVfdm3MoYBiP6Fdo0Pj7+bwK9fl4g3Qo4OXMYdouaoJaFklM4gZGhDhRQ4KInEzsafkA==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  
+app/controllers/admin/artists_controller.rb:30:in `artist_params'
+app/controllers/admin/artists_controller.rb:7:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:41:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 739ms (Views: 704.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:43:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J5tGDwLCIZLyBuTIa1uX7FBCdDVFkfgy8z1SrDqjku6NJ0LcdeEwCwQ8h6hCRmP1HTtm1yxag6O9mNTnS/7N0Q==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 5.8ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/admin/artists_controller.rb:12:in `format'
+app/controllers/admin/artists_controller.rb:12:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:44:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (17.1ms)
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:44:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 3485ms (Views: 3342.1ms | ActiveRecord: 32.7ms)
+
+
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J5tGDwLCIZLyBuTIa1uX7FBCdDVFkfgy8z1SrDqjku6NJ0LcdeEwCwQ8h6hCRmP1HTtm1yxag6O9mNTnS/7N0Q==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (too few arguments):
+  
+app/controllers/admin/artists_controller.rb:12:in `format'
+app/controllers/admin/artists_controller.rb:12:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:46:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 2845ms (Views: 2724.6ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:47:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 711ms (Views: 664.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:47:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2bnv7F0zrJs/FoxZ4p8xhlKHNkvDwX10zP00YtDBjC12uNsxlffK5rGOVFOl4jfVDMOO0bEfmSdlnKa+h5ZDw==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <div class="container">
+    2:     <%= form_for(@cd, url: new_admin_cd_path) do |f| %>
+    3: 	<h2>CD新規登録<h2>
+    4:         <label>CDジャケット画像</label><br>
+    5: 
+  
+app/views/admin/cds/new.html.erb:2:in `_app_views_admin_cds_new_html_erb__556558190419237870_70226542466980'
+app/controllers/admin/artists_controller.rb:11:in `create'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:49:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2bnv7F0zrJs/FoxZ4p8xhlKHNkvDwX10zP00YtDBjC12uNsxlffK5rGOVFOl4jfVDMOO0bEfmSdlnKa+h5ZDw==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 14.8ms)
+
+
+  
+NameError (uninitialized constant Admin::ArtistsController::Gentre):
+  
+app/controllers/admin/artists_controller.rb:14:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 06:49:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 2914ms (Views: 2791.5ms | ActiveRecord: 28.0ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:49:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M48iql9ecfszVS+bq4wVm4LmVWUSvA695gq21NEAHeyZMyZ5KH1gYsVvTPuCkeGCz59Hh3t3dSyorzCfoF1C0w==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 757ms (Views: 713.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/artists" for 10.0.2.2 at 2019-04-15 06:55:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Admin::ArtistsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 06:55:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M48iql9ecfszVS+bq4wVm4LmVWUSvA695gq21NEAHeyZMyZ5KH1gYsVvTPuCkeGCz59Hh3t3dSyorzCfoF1C0w==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 2690ms (Views: 2542.3ms | ActiveRecord: 30.2ms)
+
+
+Started GET "/admin/artists" for 10.0.2.2 at 2019-04-15 07:02:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Admin::ArtistsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:02:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M48iql9ecfszVS+bq4wVm4LmVWUSvA695gq21NEAHeyZMyZ5KH1gYsVvTPuCkeGCz59Hh3t3dSyorzCfoF1C0w==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 11.4ms)
+
+
+  
+NoMethodError (undefined method `save!' for nil:NilClass):
+  
+app/controllers/admin/artists_controller.rb:11:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 07:03:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 2984ms (Views: 2856.6ms | ActiveRecord: 25.4ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:03:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oroYbi5HYoGehJ4BIH8fDAEvh6C+5FbxhEV6e1rMX18IBhy9WWRzGGi+/WEJYusVTFaVQtcvLWDK4PwwK5EAYA==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 784ms (Views: 743.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 07:06:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (11.6ms)
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:06:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 3173ms (Views: 3044.2ms | ActiveRecord: 29.1ms)
+
+
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oroYbi5HYoGehJ4BIH8fDAEvh6C+5FbxhEV6e1rMX18IBhy9WWRzGGi+/WEJYusVTFaVQtcvLWDK4PwwK5EAYA==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: artists):
+  
+app/controllers/admin/artists_controller.rb:32:in `artist_params'
+app/controllers/admin/artists_controller.rb:7:in `create'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 07:06:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 648ms (Views: 601.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 07:06:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 775ms (Views: 732.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:07:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Dkdj9+Hotdrg/aL9YzfTHEZLGUKGCo1ui/3AXgqQrB6hRlcqKSzTp25levckStVPGA+h2PTUaT0inFKCXcdjw==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 2554ms (Views: 2449.5ms | ActiveRecord: 17.3ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:17:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ARP9NLGgflXSMNlHc70PxhGgCN/QPwnG0miaolYTRx+rr/nnxoNvzCQKuidaoPvfXNkaPbn0cleczRzpJ04YIA==", "artist"=>{"name"=>""}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (15.1ms)
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:17:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ARP9NLGgflXSMNlHc70PxhGgCN/QPwnG0miaolYTRx+rr/nnxoNvzCQKuidaoPvfXNkaPbn0cleczRzpJ04YIA==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 3347ms (Views: 3211.2ms | ActiveRecord: 24.8ms)
+
+
+Completed 200 OK in 918ms (Views: 910.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/artists" for 10.0.2.2 at 2019-04-15 07:24:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Admin::ArtistsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 07:24:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (13.7ms)
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:24:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Dkdj9+Hotdrg/aL9YzfTHEZLGUKGCo1ui/3AXgqQrB6hRlcqKSzTp25levckStVPGA+h2PTUaT0inFKCXcdjw==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+Completed 200 OK in 3279ms (Views: 3113.9ms | ActiveRecord: 35.7ms)
+
+
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 750ms (Views: 682.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/cds/new" for 10.0.2.2 at 2019-04-15 07:26:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::CdsController#new as HTML
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 2995ms (Views: 2877.2ms | ActiveRecord: 25.3ms)
+
+
+Started POST "/admin/artists" for 10.0.2.2 at 2019-04-15 07:27:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n9/CmUQlqUEga69Tf/BwnOHYCD/qDBBcViyDpfV0Tgs1Y8ZKMwa42NZRzDNW7YSFrKEa3YPHa80YiQXuhCkRNA==", "artist"=>{"name"=>"AAA"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/artists_controller.rb:8
+  Rendering admin/cds/new.html.erb within layouts/application
+  Rendered admin/cds/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 661ms (Views: 619.1ms | ActiveRecord: 0.1ms)
+
+

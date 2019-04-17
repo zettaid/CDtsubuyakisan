@@ -5,6 +5,9 @@ class Admin::CdsController < ApplicationController
 
   def new
     @cd = Cd.new
+    @artist = Artist.new
+    @label = Label.new
+    @genre = Genre.new
   end
 
   def create

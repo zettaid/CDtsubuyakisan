@@ -5,16 +5,16 @@ class Admin::GenresController < ApplicationController
 
   def create
   	@genre = Genre.new(genre_params)
-    respond_to do |format|
-      if @genre.save
-        format.html { redirect_to @genre, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @genre }
-        format.js { @status = "success"}
-      else
-        format.html { render :new }
-        format.json { render json: @genre.errors, status: :unprocessable_entity }
-        format.js { @status = "fail" }
-      end
+    binding.pry
+    if @genre.save
+      format.html { redirect_to @genre, notice: 'Genre was successfully created.' }
+      format.js { @status = "success"}
+    else
+      @cd = Cd.new
+      @artist = Artist.new
+      @label = Label.new
+      @genre = Genre.new
+      render new_admin_cd_path
     end
   end
 
@@ -28,4 +28,9 @@ class Admin::GenresController < ApplicationController
 
   def destroy
   end
+
+  private
+    def genre_params
+        params.require(:genre).permit(:name)
+    end
 end

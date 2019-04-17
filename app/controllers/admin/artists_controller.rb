@@ -5,16 +5,14 @@ class Admin::ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new(artist_params)
-    respond_to do |format|
-      if @artist.save
-        format.html { redirect_to @artist, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @artist }
-        format.js { @status = "success"}
-      else
-        format.html { render :new }
-        format.json { render json: @artist.errors, status: :unprocessable_entity }
-        format.js { @status = "fail" }
-      end
+    if @artist.save
+      redirect_to new_admin_cd_path
+    else
+      @cd = Cd.new
+      @artist = Artist.new
+      @label = Label.new
+      @genre = Genre.new
+      render new_admin_cd_path
     end
   end
 
@@ -28,4 +26,9 @@ class Admin::ArtistsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def artist_params
+        params.require(:artist).permit(:name)
+    end
 end
