@@ -1,0 +1,42 @@
+<div class="container"> <!-- ここを追加 -->
+  <div class="row">   <!-- ここを追加 -->
+    <div class="col-md-10 col-md-offset-1">
+      <%= form_for @shop, url: admin_shop_path do |f| %>
+      <b>CDショップ名</b>
+        <div class="ShopNameEdit"><%= f.text_field :name, autofocus: true, class:"form-control", id:"inputName", placeholder:"名前"%></div>
+
+            <b>CDショップの概要説明</b>
+    　         <div class="Textarea">
+              　<%= f.text_area :body, autofocus: true, class:"form-control body", id:"inputBody", placeholder:"body"%>
+              </div>
+
+            <b>代表者名編集</b>
+              <div class="Mastername">
+                <%= f.text_field :master, autofocus: true, class:"form-control", id:"inputMaster", placeholder:"代表者名"%>
+              </div>
+              <br>
+            <b>郵便番号編集</b>
+              <div class="Postnumber">
+                <%= f.text_field :post_number, autofocus: true, class:"form-control", id:"inputPostNumber", placeholder:"郵便番号"%>
+              </div>
+            <b>住所編集</b>
+              <div class="Address">
+                <%= f.text_field :address, autofocus: true, class:"form-control", id:"inputAddress", placeholder:"住所"%>
+              </div>
+            <b>電話番号編集</b>
+              <div class="Phonenumebr">
+                <%= f.text_field :phone_number, autofocus: true, class:"form-control", id:"inputPhoneNumber", placeholder:"電話番号"%>
+              </div>
+            <b>メールアドレス編集</b>
+              <div class="Email">
+                <%= f.text_field :email, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"Email"%>
+              </div>
+
+
+                <%= f.submit 'Update User',class: 'btn btn-default col-lg-2' %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+

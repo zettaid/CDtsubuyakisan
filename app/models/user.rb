@@ -1,5 +1,9 @@
 class User < ApplicationRecord
 
+  has_many :cart
+  has_many :review
+
+
 	def self.search(search)
 	    if search
 	      User.where(['email LIKE ?', "%#{search}%"])
@@ -11,4 +15,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
 end

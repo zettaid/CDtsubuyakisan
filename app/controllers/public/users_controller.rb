@@ -1,4 +1,5 @@
 class Public::UsersController < ApplicationController
+
 	def top
     end
 
@@ -23,4 +24,5 @@ class Public::UsersController < ApplicationController
     	@user = User.find(params[:id])
         @user.update(user_params)
     end
+
 end

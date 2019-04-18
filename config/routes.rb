@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'public/users#top'
+
   namespace :admin do
     resources :cds do
     end
@@ -10,6 +13,9 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :users
+  resources :shops
+  resources :reviews
   end
   namespace :public do
     resources :cds do
@@ -25,6 +31,8 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :users
+    resources :reviews
   end
 
   resources :carts do
