@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_030609) do
+ActiveRecord::Schema.define(version: 2019_04_14_074343) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +43,17 @@ ActiveRecord::Schema.define(version: 2019_04_13_030609) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "histories", force: :cascade do |t|
+    t.integer "cart_id"
+    t.integer "status"
+    t.text "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_first_time"
+    t.string "user_last_name"
+    t.string "post_number"
+  end
+
   create_table "labels", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -50,6 +67,42 @@ ActiveRecord::Schema.define(version: 2019_04_13_030609) do
     t.integer "disk_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "price"
+    t.integer "cart_id"
+    t.integer "quantity"
+    t.integer "cd_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.text "email", default: "", null: false
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.string "first_name_kana", default: "", null: false
+    t.string "last_name_kana", default: "", null: false
+    t.string "post_number", default: "", null: false
+    t.string "phone_number", default: "", null: false
+    t.text "address", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "deleated", default: false, null: false
+    t.boolean "admin", default: false, null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "name"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

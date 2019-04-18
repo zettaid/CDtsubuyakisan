@@ -1,4 +1,5 @@
 
+
 # Created by https://www.gitignore.io/api/rails
 # Edit at https://www.gitignore.io/?templates=rails
 
@@ -59,7 +60,7 @@ node_modules/
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test
-/public/assets
+/public/assets<<< HEAD
 
 # Ignore yarn files
 /yarn-error.log
