@@ -5,5 +5,6 @@ class Cd < ApplicationRecord
 	has_many :artists
 	has_many :labels
 	has_many :genres
+	has_many :orders
 	has_many :musics, dependent: :destroy
 end
