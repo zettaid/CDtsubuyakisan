@@ -7,7 +7,7 @@ class Admin::ReviewsController < ApplicationController
 	def create
 
 		@review = Review.new(review_params)
-	 if @review.save!
+	 if @review.save
 		redirect_to root_path
      else
       	redirect_to admin_shops_path

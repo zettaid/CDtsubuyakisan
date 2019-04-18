@@ -5723,3 +5723,69 @@ Processing by Admin::ShopsController#edit as HTML
 Completed 200 OK in 701ms (Views: 659.6ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/admin/reviews/2/edit" for 10.0.2.2 at 2019-04-18 07:29:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Admin::ReviewsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (1.8ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/reviews_controller.rb:21
+Completed 404 Not Found in 59ms (ActiveRecord: 11.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review with 'id'=2):
+  
+app/controllers/admin/reviews_controller.rb:21:in `edit'
+Started GET "/admin/reviews/1/edit" for 10.0.2.2 at 2019-04-18 07:30:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ReviewsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReview Load (2.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/reviews_controller.rb:21
+Completed 404 Not Found in 6ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review with 'id'=1):
+  
+app/controllers/admin/reviews_controller.rb:21:in `edit'
+Started GET "/admin/reviews" for 10.0.2.2 at 2019-04-18 07:30:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ReviewsController#index as HTML
+  Rendering admin/reviews/index.html.erb within layouts/application
+  Rendered admin/reviews/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 4324ms (Views: 4279.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/reviews" for 10.0.2.2 at 2019-04-18 07:30:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rGyDfHFj7cFNBz4l3SKHMXDegEp/2TK36p9kesndRoLodGJxZIHXBpwV7+uploxYxdLp2wrWQYf289ubtfkDAQ==", "review"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f5c2c11a6b8 @tempfile=#<Tempfile:/tmp/RackMultipart20190418-12358-uwa3z2.jpg>, @original_filename="ER図.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"review[image]\"; filename=\"ER\xE5\x9B\xB3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "text"=>"dsvfsvr"}, "commit"=>"投稿する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/reviews_controller.rb:10
+Completed 422 Unprocessable Entity in 79ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/admin/reviews_controller.rb:10:in `create'
+Started POST "/admin/reviews" for 10.0.2.2 at 2019-04-18 07:30:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ReviewsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rGyDfHFj7cFNBz4l3SKHMXDegEp/2TK36p9kesndRoLodGJxZIHXBpwV7+uploxYxdLp2wrWQYf289ubtfkDAQ==", "review"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f5c39b92480 @tempfile=#<Tempfile:/tmp/RackMultipart20190418-12358-yx81u1.jpg>, @original_filename="ER図.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"review[image]\"; filename=\"ER\xE5\x9B\xB3.jpg\"\r\nContent-Type: image/jpeg\r\n">, "text"=>"dsvfsvr"}, "commit"=>"投稿する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admin/reviews_controller.rb:10
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/admin/reviews_controller.rb:10:in `create'
