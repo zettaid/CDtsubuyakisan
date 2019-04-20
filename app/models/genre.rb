@@ -1,3 +1,3 @@
 class Genre < ApplicationRecord
-	belongs_to :cd
+	has_many :cd
 end

@@ -1,8 +1,28 @@
 <div id="nav-search">
-    <%= form_tag '/', :method => 'get' do %>
+    <%= form_tag '/admin/cds', :method => 'get' do %>
         <p>
             <%= text_field_tag :search, params[:search] %>
             <%= submit_tag "検索", :cd_name => nil %>
         </p>
     <% end %>
+
+    <table class="table table-hover table-inverse">
+	<thead>
+			<tr>
+				<th></th>
+				<th>title</th>
+				<th>artist name</th>
+				<th>price</th>
+			</tr>
+	</thead>
+	<tbody>
+			<% @cds.each do |cd| %>
+			<tr>
+				
+				<td><%= cd.cd_name %></td>
+
+				<td><%= cd.price %></td>
+			</tr>
+		<% end %>
 </div>
+

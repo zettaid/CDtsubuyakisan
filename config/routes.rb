@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :cds do
+      collection do
+        get 'search' => 'cds#search'
+      end
     end
     resources :artists do
     end
@@ -17,6 +20,7 @@ Rails.application.routes.draw do
   resources :shops
   resources :reviews
   end
+
   namespace :public do
     resources :cds do
       collection do
