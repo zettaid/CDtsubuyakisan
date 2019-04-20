@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :histories do
+    end
   end
   namespace :public do
     resources :cds do
