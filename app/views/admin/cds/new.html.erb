@@ -1,28 +1,29 @@
 <div class="container">
-    <%= form_for(@cd, url: new_admin_cd_path) do |f| %>
-	<h2>CD新規登録<h2>
-        <label>CDジャケット画像</label><br>
+    <%= form_for(@cd, url: admin_cds_path) do |f| %>
+	<div class="registration-title"><h2>CD新規登録<h2></div>
+        <div class="registration-left"><label>CDジャケット画像</label></div>
+        <div>
+            <%= f.attachment_field :image, class:"image" %>
+        </div>
+        <div class="registration-left"><label>アルバム/シングル名</label></div>
+			<%= f.text_field :cd_name, class:"cd_name col-xs-9" %><br><br>
+		<div class="registration-left"><label>アーティスト名</label></div>
+				<%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
+			<div>
+            	<div id="artist_button" class="new_lebel btn-sm btn-success col-xs-6">アーティスト新規登録</div><br><br>
+        	</div>
+		<div class="registration-left"><label>単価</label></div>
+			<%= f.text_field :price, class:"price col-xs-9" %>円<br><br>
+		<div class="registration-left"><label>レーベル</label></div>
+		    <%= f.collection_select(:label_id, Label.all, :id, :name) %><br><br>
+            <div id="label_button" class="new_lebel btn-sm btn-success col-xs-6">レーベル新規登録</div><br><br><br>
+		<div class="registration-left"><label>CDジャンル</label></div>
+		    <%= f.collection_select(:genre_id, Genre.all, :id, :name) %><br><br>
+            <div id="genre_button" class="new_lebel btn-sm btn-success col-xs-6">CDジャンル新規登録</div><br><br><br>
 
-        <label>アルバム/シングル名</label><br>
-			<%= f.text_field :cd_name, class:"cd_name col-xs-12" %><br>
-		<label>アーティスト名</label><br>
-            <div id="artist_button" class="new_lebel btn-sm btn-success">新規登録</div><br>
-		<label>単価</label><br>
-			<%= f.text_field :price, class:"price col-xs-12" %>円<br>
-		<label>レーベル</label><br>
-            <div id="label_button" class="new_lebel btn-sm btn-success">新規登録</div><br>
-		<label>CDジャンル</label><br>
-            <div id="genre_button" class="new_lebel btn-sm btn-success">新規登録</div><br>
-           
-		<label>Disk番号</label><br>
-            
-		<label>曲順</label><br>
-            
-		<label>曲名</label><br>
-            
-		<label>在庫数</label><br>
-			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
-            <%= f.submit "新規登録", class:"create_admin_cd btn btn-primary col-xs-12" %>
+		<div class="registration-left"><label>在庫数</label></div>
+			<%= f.text_field :stock, class:"stock col-xs-6" %>個<br><br><br>
+            <%= f.submit "新規登録", class:"create_admin_cd btn btn-primary col-xs-6" %>
 	<% end %>
 
 	<div id="cd-modal-artist" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">

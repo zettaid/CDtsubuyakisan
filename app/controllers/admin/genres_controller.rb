@@ -5,10 +5,8 @@ class Admin::GenresController < ApplicationController
 
   def create
   	@genre = Genre.new(genre_params)
-    binding.pry
     if @genre.save
-      format.html { redirect_to @genre, notice: 'Genre was successfully created.' }
-      format.js { @status = "success"}
+      redirect_to new_admin_cd_path
     else
       @cd = Cd.new
       @artist = Artist.new

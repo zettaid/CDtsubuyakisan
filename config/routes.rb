@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :cds do
+      collection do
+        get 'search' => 'cds#search'
+      end
     end
     resources :artists do
     end

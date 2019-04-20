@@ -5,9 +5,8 @@ class Admin::LabelsController < ApplicationController
 
   def create
   	@label = Label.new(label_params)
-    if @lebel.save
-      format.html { redirect_to @lebel, notice: 'Label was successfully created.' }
-      format.js { @status = "success"}
+    if @label.save
+      redirect_to new_admin_cd_path
     else
       @cd = Cd.new
       @artist = Artist.new
