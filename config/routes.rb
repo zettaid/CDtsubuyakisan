@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+
+    resources :histories do
+    end
     resources :users
   resources :shops
   resources :reviews

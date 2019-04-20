@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cart_id: 1
+  status: 1
+  address: MyText
+  created_at: 2019-04-14 07:43:43
+  updated_at: 2019-04-14 07:43:43
+  user_first_time: MyString
+  user_last_name: MyString
+  post_number: MyString
+
+two:
+  cart_id: 1
+  status: 1
+  address: MyText
+  created_at: 2019-04-14 07:43:43
+  updated_at: 2019-04-14 07:43:43
+  user_first_time: MyString
+  user_last_name: MyString
+  post_number: MyString
