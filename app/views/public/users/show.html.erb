@@ -1,0 +1,18 @@
+
+ユーザーのマイページ
+<%= user.first_name %>
+<%= user.last_name %>
+<%= post_number %>
+<%= address %>
+<%= phone_number %>
+<%= email %>
+
+
+		<% if @user == current_user %>
+        		<%= link_to "Edit", edit_users_path(@user.id), class: "edit_#{@user.id}" %>
+        <% end %>
+
+        <% if @user == current_user %>
+        	   <%= link_to "Destroy", user_path(@user.id), class: "destroy_#{@user.id}", method: :delete, "data-confirm" => "本当に消しますか？" %>
+        <% end %>
+
