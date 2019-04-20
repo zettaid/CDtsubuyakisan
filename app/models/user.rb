@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	validates :zip_code, format: { with: /\A\d{3}\-?\d{4}\z/ }
 
 	def self.search(search)
 	    if search

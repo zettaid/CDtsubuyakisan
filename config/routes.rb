@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  root 'public/users#top'
+
   namespace :admin do
     resources :cds do
     end
@@ -10,7 +14,11 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :users, only: [:show, :index, :edit, :update, :destroy] do
+    end
+
   end
+
   namespace :public do
     resources :cds do
       collection do
@@ -25,6 +33,9 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
+    resources :users, only: [:show, :edit, :update, :destroy] do
+    end
+
   end
 
   resources :carts do

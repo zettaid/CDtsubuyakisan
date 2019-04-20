@@ -10,7 +10,7 @@
         </div>
     <% end %>
 
-<%= form_for(@user) do |f| %>
+<%= form_for @user, url: public_user_path do |f| %>
 　　<div class="field">
     <%= f.label :名前（姓） %><br />
     <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "name" %>

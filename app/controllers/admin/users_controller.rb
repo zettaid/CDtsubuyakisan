@@ -10,6 +10,10 @@ class Admin::UsersController < ApplicationController
     	@users = User.where(activated: true)
     end
 
+    def edit
+	    @user = User.find(params[:id])
+	end
+
     def destroy
     	@user = User.find(params[:id])
         @user.destroy
