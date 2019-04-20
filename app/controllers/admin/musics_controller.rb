@@ -1,6 +1,7 @@
 class Admin::MusicsController < ApplicationController
   def new
     @music = Music.new
+    @cds = Cd.all
   end
 
   def create
@@ -18,4 +19,9 @@ class Admin::MusicsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def music_params
+        params.require(:music).permit(:disk_number, :track, :name, :cd_id)
+    end
 end

@@ -1,3 +1,3 @@
 class Label < ApplicationRecord
-	belongs_to :cd
+	has_many :cd
 end

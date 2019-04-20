@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_14_074343) do
+ActiveRecord::Schema.define(version: 2019_04_18_011744) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
@@ -18,16 +18,10 @@ ActiveRecord::Schema.define(version: 2019_04_14_074343) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "carts", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cds", force: :cascade do |t|
     t.integer "artist_id", null: false
     t.string "cd_name", null: false
-    t.integer "image_id"
+    t.string "image_id"
     t.integer "price", null: false
     t.integer "label_id", null: false
     t.integer "stock", null: false
@@ -41,17 +35,6 @@ ActiveRecord::Schema.define(version: 2019_04_14_074343) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "histories", force: :cascade do |t|
-    t.integer "cart_id"
-    t.integer "status"
-    t.text "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "user_first_time"
-    t.string "user_last_name"
-    t.string "post_number"
   end
 
   create_table "labels", force: :cascade do |t|
@@ -69,11 +52,24 @@ ActiveRecord::Schema.define(version: 2019_04_14_074343) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "price"
-    t.integer "cart_id"
-    t.integer "quantity"
+  create_table "reviews", force: :cascade do |t|
+    t.text "image_id"
+    t.text "text"
+    t.integer "user_id"
     t.integer "cd_id"
+    t.boolean "deleated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "master"
+    t.string "post_number"
+    t.text "address"
+    t.string "phone_number"
+    t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

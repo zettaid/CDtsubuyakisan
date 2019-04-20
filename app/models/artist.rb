@@ -1,3 +1,3 @@
 class Artist < ApplicationRecord
-	belongs_to :cd
+	has_many :cd
 end
