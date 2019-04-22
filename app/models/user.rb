@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   has_many :cart
-  has_many :review
+  has_many :reviews
 
 
 	def self.search(search)

@@ -5,12 +5,13 @@ class Admin::ReviewsController < ApplicationController
     end
 
 	def create
-
 		@review = Review.new(review_params)
+		@user = User.first
+		@review.user_id = @user.id
 	 if @review.save
 		redirect_to root_path
      else
-      	redirect_to admin_shops_path
+      	redirect_to root_path
       end
 	end
 
@@ -26,7 +27,12 @@ class Admin::ReviewsController < ApplicationController
 	end
 
 	def update
+		@review = Review.find(params[:id])
+        @review.update(review_params)
+		redirect_to root_path
 	end
+
+	
 
 
 
