@@ -1,6 +1,6 @@
 <h2> 注文完了いたしました</h2>
 
-      <%= @user.address%>へ配送いたします
+      <%= @history.address%>へ<%= @history.user_last_name%><%= @history.user_first_name %>様宛に配送いたします
 
 
-      <%#= link_to "Topに戻る",user_path %>
+      <%= link_to "Topに戻る", "" %>

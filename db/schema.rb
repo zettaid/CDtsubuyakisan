@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 2019_04_22_121414) do
     t.datetime "updated_at", null: false
     t.string "user_last_name"
     t.string "post_number"
+    t.string "user_first_name"
+
+
   end
 
   create_table "labels", force: :cascade do |t|

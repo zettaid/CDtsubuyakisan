@@ -1,7 +1,7 @@
 class Cart < ApplicationRecord
 	has_many :orders
 	belongs_to :user
-    belongs_to :history
+    has_one :history
 
 	def add_cd(cd_id)
 		current_order = orders.find_by_cd_id(cd_id)
@@ -13,6 +13,7 @@ class Cart < ApplicationRecord
 		end
 		current_order
 	end
+
 
 	def total_price
 		orders.to_a.sum{ |order| order.total_price}
