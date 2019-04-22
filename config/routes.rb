@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'user_index' => 'admin/users#', as: 'users'
 
   namespace :admin do
-    resources :cds do
+    resources :cds, :except => :show do
       collection do
         get 'search' => 'cds#search'
       end
@@ -20,12 +20,14 @@ Rails.application.routes.draw do
     resources :genres do
     end
 
+
     resources :users, only: [:show, :index, :edit, :update, :destroy] do
     end
 
     resources :shops
     resources :reviews
-
+    resources :histories do
+    end
   end
 
   namespace :public do

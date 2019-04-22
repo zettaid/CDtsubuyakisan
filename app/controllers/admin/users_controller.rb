@@ -10,8 +10,6 @@ class Admin::UsersController < ApplicationController
     	@user = current_user
     	@users = User.where(activated: true).search(params[:search])
         @cd_users = User.all
-
-
     end
 
 

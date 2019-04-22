@@ -1,19 +1,20 @@
 <p>ユーザー検索</p>
-		<%= form_tag(users_path, :method => 'get' ) do %>
-  				<%= text_field_tag :search %>
+		<%= form_tag '/admin/users', :method => 'get' do %>
+  				<%= text_field_tag :search, params[:search] %>
   				<%= submit_tag '検索', :name => nil %>
 		<% end %>
 
 <p>会員一覧</p>
 		<% @cd_users.each do |user| %>
 		        <%= user.first_name %>
-		        <%= link_to 'show' , public_user_path(user.id), class: "user_#{user.id}" %>
+		        <%= user.last_name %>
+		        <%= link_to '詳細' , public_user_path(user.id), class: "user_#{user.id}" %>
 		<% end %>
 
 		<% if @user == current_user %>
-        		<%= link_to "Edit", edit_public_user_path(@user.id), class: "edit_#{@user.id}" %>
+        		<%= link_to "編集", edit_public_user_path(@user.id), class: "edit_#{@user.id}" %>
         <% end %>
 
         <% if @user == current_user %>
-        	   <%= link_to "Destroy", root_path(@user.id), class: "destroy_#{@user.id}", method: :delete, "data-confirm" => "本当に消しますか？" %>
+        	   <%= link_to "削除", root_path(@user.id), class: "destroy_#{@user.id}", method: :delete, "data-confirm" => "本当に消しますか？" %>
         <% end %>

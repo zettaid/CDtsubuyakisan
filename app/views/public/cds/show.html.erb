@@ -1,13 +1,38 @@
-<div class="col-xs-9">
-		<%= attachment_image_tag @cd, :image, :fill, 40, 40, fallback:"No_image.png",size: '40x40' %><br>
+<%= link_to '戻る', :back %>
+<%= link_to '商品一覧', public_cds_path %>
+<%= link_to '管理者用商品一覧', admin_cds_path %>
+<div class="col-xs-6">
+	<%= attachment_image_tag @cd, :image, :fill, 500, 500, fallback:"no_image.jpg",size: '500x500' %>
+</div>
+<div class="col-xs-6">
 		<h3>商品名</h3>
-		<%= @cd.name %>
+		<%= @cd.cd_name %>
 		<h3>アーティスト</h3>
-		<%= @cd.artist_id.name %>
+		<%= @cd.artist.name %>
 		<h3>レーベル</h3>
-		<%= @cd.label_id %>
-		<% if current_user.admin == true %>
-       	<%= link_to "Edit", edit_admin_cd_path(@cd.id), class:"edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
-       	<%= link_to "Destroy", admin_cd_path(@cd.id), method: :delete, class:"destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "Are you sure？" %>
-	    <% end %>
+		<%= @cd.label.name %>
+		<h3>値段</h3>
+		<%= @cd.price %>
+		<h3>在庫数</h3>
+		<% if @cd.stock == 0 %>
+		    <%= image_tag('pop_sold_out.jpg', :size => '120x60') %>
+		<% else %>
+		    <%= @cd.stock %>
+		<% end %>
+		<h3>ジャンル</h3>
+		<%= @cd.genre.name %>
+		<h3>曲一覧</h3>
+		<% @musics.each do |musics| %>
+		<tbody>
+			<tr>
+				<td>Disk.<%= musics.disk_number %></td>
+				<td><%= musics.track %>.</td>
+				<td><%= musics.name %></td>
+				<td><%= link_to "Destroy", admin_music_path(musics.id), method: :delete, class:"destroy_music_#{musics.id} btn-sm btn-danger", "data-confirm" => "曲を削除します。よろしいですか？" %></td><br>
+			</tr>
+		</tbody>
+		<% end %>
+		<%= link_to '曲登録', new_admin_music_path, class:"new_admin_cd btn-sm btn-success" %><br><br>
+		<%= link_to "編集", edit_admin_cd_path(@cd.id), class:"edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
+       	<%= link_to "削除", admin_cd_path(@cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %>
 </div>
