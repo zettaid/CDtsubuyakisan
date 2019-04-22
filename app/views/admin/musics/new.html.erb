@@ -1,8 +1,8 @@
 <div class="container">
-    <%= form_for(@music, url: admin_musics_path) do |f| %>
+    <%= form_for(@musics, url: admin_musics_path) do |f| %>
 	<div class="registration-title"><h2>CD収録曲登録<h2></div>
         <div class="registration-left"><label>収録CD名</label></div>
-				<%= f.collection_select(:cd_id, Cd.all, :id, :cd_name) %>
+				<%= f.collection_select(:cd_id, Cd.where(deleated: 'false'), :id, :cd_name) %>
 		<div class="registration-left"><label>曲名</label></div>
 		<form class="form-serialize">
   <table id="form_set_1">
@@ -22,7 +22,7 @@
     </tbody>
   </table>
   <input type="button" value="入力フォームの追加" id="add_btn"><br>
-  <%= f.submit "新規登録", class:"create_admin_music btn btn-primary col-xs-12" %>
+  <%= f.submit "新規登録", class:"create_admin_music btn-sm btn-primary col-xs-12" %>
 </form>
     <% end %>
 </div>

@@ -10,5 +10,6 @@ class Cd < ApplicationRecord
 	belongs_to :label, optional: true
 	belongs_to :genre, optional: true
 	has_many :musics, dependent: :destroy
+  accepts_nested_attributes_for :musics, allow_destroy: true
   attachment :image
 end
