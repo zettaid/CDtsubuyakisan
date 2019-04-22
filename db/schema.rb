@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_14_073706) do
+ActiveRecord::Schema.define(version: 2019_04_18_011744) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_04_14_073706) do
   create_table "cds", force: :cascade do |t|
     t.integer "artist_id", null: false
     t.string "cd_name", null: false
-    t.integer "image_id"
+    t.string "image_id"
     t.integer "price", null: false
     t.integer "label_id", null: false
     t.integer "stock", null: false
@@ -48,6 +48,28 @@ ActiveRecord::Schema.define(version: 2019_04_14_073706) do
     t.string "name", null: false
     t.integer "track", null: false
     t.integer "disk_number", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "image_id"
+    t.text "text"
+    t.integer "user_id"
+    t.integer "cd_id"
+    t.boolean "deleated"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.string "master"
+    t.string "post_number"
+    t.text "address"
+    t.string "phone_number"
+    t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

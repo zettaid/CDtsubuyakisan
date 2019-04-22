@@ -1,5 +1,8 @@
 class User < ApplicationRecord
-	validates :zip_code, format: { with: /\A\d{3}\-?\d{4}\z/ }
+
+  has_many :cart
+  has_many :review
+
 
 	def self.search(search)
 	    if search
@@ -12,4 +15,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
 end

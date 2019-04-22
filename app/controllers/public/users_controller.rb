@@ -28,10 +28,12 @@ class Public::UsersController < ApplicationController
         redirect_to root_path
     end
 
+
     private
 
     def user_params
     	params.require(:user).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :post_number, :address, :phone_number, :email)
     end
+
 
 end

@@ -1,0 +1,77 @@
+<div class="container">
+    <%= form_for(@music, url: admin_musics_path) do |f| %>
+	<div class="registration-title"><h2>CD収録曲登録<h2></div>
+        <div class="registration-left"><label>収録CD名</label></div>
+				<%= f.collection_select(:cd_id, Cd.all, :id, :cd_name) %>
+		<div class="registration-left"><label>曲名</label></div>
+		<form class="form-serialize">
+  <table id="form_set_1">
+    <tbody>
+      <tr>
+        <td><label for="music_disk_number_1">Disk番号</label></td>
+        <td><%= f.text_field :disk_number, class:"music_disk_number col-xs-12" %></td>
+      </tr>
+      <tr>
+        <td><label for="music_track_1">曲順</label></td>
+        <td><%= f.text_field :track, class:"music_track col-xs-12" %></td>
+      </tr>
+      <tr>
+        <td><label for="music_name">曲名</label></td>
+        <td><%= f.text_field :name, class:"music_name col-xs-12" %></td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" value="入力フォームの追加" id="add_btn"><br>
+  <%= f.submit "新規登録", class:"create_admin_music btn btn-primary col-xs-12" %>
+</form>
+    <% end %>
+</div>
+
+
+<script>
+	$(function () {
+  var tbl_cnt = 1;
+  // 追加ボタンをクリックした時の処理
+  $('#add_btn').click(function () {
+    var original = $('#form_set_' + tbl_cnt);
+    tbl_cnt += 1;
+    // クローンを作成し、元の後ろに設置。
+    $(original)
+      .clone()
+      .insertAfter(original)
+      // クローンのid属性を変更。
+      .attr('id', 'form_set_' + tbl_cnt)
+      // label要素のfor属性を変更。
+      .find('label').each(function (idx, obj) {
+        $(obj).attr(
+          'for',
+          $(obj).attr('for').replace(/_[0-9]+$/, '_' + tbl_cnt)
+        );
+      })
+      .end()
+      // input要素のid,name属性を変更。value値を空白に。
+      .find('input').each(function (idx, obj) {
+        $(obj).attr({
+          id: $(obj).attr('id').replace(/_[0-9]+$/, '_' + tbl_cnt),
+          name: $(obj).attr('name').replace(/_[0-9]+$/, '_' + tbl_cnt)
+        }).val('');
+      });
+  });
+});
+
+/**
+ * フォームの中身をアラートで表示する
+ */
+$(function() {
+  $('.form-serialize').submit(function(ev) {
+    ev.preventDefault();
+    var arr = $(this).serializeArray();
+    console.log(arr);
+    var result = '';
+    $.each(arr, function(i, f) {
+      result += f.name + ': ' + f.value + '\n';
+    });
+    alert(result);
+  });
+});
+</script>

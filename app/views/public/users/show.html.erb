@@ -1,3 +1,4 @@
+
 ユーザーのマイページ
 <%= @user.first_name %>
 <%= @user.last_name %>
@@ -12,5 +13,6 @@
         <% end %>
 
         <% if @user == current_user %>
+
         	   <%= link_to "退会", root_path(@user.id), class: "destroy_#{@user.id}", method: :delete, "data-confirm" => "本当に消しますか？" %>
         <% end %>
