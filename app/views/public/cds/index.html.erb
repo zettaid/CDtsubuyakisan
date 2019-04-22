@@ -18,10 +18,11 @@
 	<tbody>
 			<% @cds.each do |cd| %>
 			<tr>
-				
-				<td><%= cd.cd_name %></td>
-
-				<td><%= cd.price %></td>
+				<td><%= attachment_image_tag cd, :image, :fill, 50, 50, fallback: "no_image.jpg",size: '50x50' %></td>
+				<td><%= link_to cd.cd_name, public_cd_path(cd.id), class:"public_cd_#{cd.id}" %></td>
+				<td><%= cd.artist.name %></td>
+				<td><%= cd.price %> 円</td>
 			</tr>
 		<% end %>
 </div>
+

@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   root 'public/users#top'
+  get 'user_index' => 'admin/users#', as: 'users'
 
   namespace :admin do
-    resources :cds do
+    resources :cds, :except => :show do
       collection do
         get 'search' => 'cds#search'
       end
@@ -17,11 +20,14 @@ Rails.application.routes.draw do
     resources :genres do
     end
 
+
+    resources :users, only: [:show, :index, :edit, :update, :destroy] do
+    end
+
+    resources :shops
+    resources :reviews
     resources :histories do
     end
-    resources :users
-  resources :shops
-  resources :reviews
   end
 
   namespace :public do
@@ -38,8 +44,13 @@ Rails.application.routes.draw do
     end
     resources :genres do
     end
-    resources :users
+
+    resources :users, only: [:show, :edit, :update, :destroy] do
+    end
+
+
     resources :reviews
+
   end
 
   resources :carts do

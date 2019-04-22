@@ -7,6 +7,7 @@ class Admin::MusicsController < ApplicationController
   def create
   	@music = Music.new(music_params)
   	@music.save
+    redirect_to public_cd_path(@music.cd_id)
   end
 
   def edit
@@ -18,6 +19,9 @@ class Admin::MusicsController < ApplicationController
   end
 
   def destroy
+    music = Music.find(params[:id])
+    music.destroy
+    redirect_to public_cd_path(music.cd_id)
   end
 
   private
