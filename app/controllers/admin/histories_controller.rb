@@ -5,7 +5,7 @@ class Admin::HistoriesController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def edit
