@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheets" href="carts.scss">
+	<title></title>
+</head>
+<body>
+<div class="main">
+	<ul class="main-box">
+
+<table>
+	<tr>
+		<th>商品名</th>
+		<th>価格</th>
+		<th>数量</th>
+		<th>合計</th>
+
+	</tr>
+		<% @cart.orders.each do |order| %>
+		<tr>
+			<%#<td text-align:center;><img height="80" src="<%=h item.good.image_url "/></td%> 
+			<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
+			<td text-align:center;><font size="4"><%= (order.cd.price).to_i %>円</font></td>
+			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
+			<td text-align:center;><font size="4"><%= (order.total_price).to_i %>円</font></td>
+			<%= link_to "削除",cart_path(@cart) %>
+		</tr>
+		<% end %>
+
+		<tr>
+			<td colspan="5"><font size="5">総計：<%= (@cart.total_price).to_i %>円</font></td>
+		</tr>
+
+		<%= link_to "注文確定",cart_confirm_path(@cart)%><br>
+
+
+</table>
+
+
+		<% @orders.each do |order| %>
+			<li>値段:<%= order.price%></li>
+			<li>数量:<%= order.quantity %></li>
+			<li>ジャケット画像 : <%= order.cd.image_id %></li>
+			<li>商品名 :<%= order.cd.cd_name %></li>
+			<%= link_to "削除",cart_path(current_cart) %>
+		<% end %>
+	</ul>
+</div>
+
+
+
+<footer></footer><!-- /header -->
+
+
+</body>
+</html>
+
+
+

@@ -1,11 +1,15 @@
 class Admin::CdsController < ApplicationController
   def search
     #Viewのformで取得したパラメータをモデルに渡す
-    @cds = Cd.search(params[:search])
+    if @cds = Cd.search(params[:search])
+        flash[:notice] = "検索結果"
+    else
+    end
   end
 
   def index
     @cds = Cd.search(params[:search])
+    @artists = Artist.all
   end
 
   def new
@@ -16,15 +20,13 @@ class Admin::CdsController < ApplicationController
     @labels = Label.all
     @genre = Genre.new
     @genres = Genre.all
-    @music = Music.new
-    @musics = Music.all
   end
 
   def create
     @cd = Cd.new(cd_params)
     if @cd.save
         flash[:notice] = "CD was successfully updated."
-        redirect_to new_admin_cd_path
+        redirect_to new_admin_music_path
     else
         @cd = Cd.new
         @artist = Artist.new
@@ -33,8 +35,6 @@ class Admin::CdsController < ApplicationController
         @labels = Label.all
         @genre = Genre.new
         @genres = Genre.all
-        @music = Music.new
-        @musics = Music.all
         flash[:error] = "Any error has occurred."
         render :new
     end
@@ -53,10 +53,21 @@ class Admin::CdsController < ApplicationController
   def update
     @cd = Cd.find(params[:id])
     @cd.update(cd_params)
+    redirect_to public_cd_path(@cd.id)
   end
+
+  def destroy
+    @cd = Cd.find(params[:id])
+    @cd.update(delete_cd_params)
+    redirect_to admin_cds_path
+  end
+
 
   private
     def cd_params
-        params.require(:cd).permit(:cd_name, :artist_id, :image, :price, :label_id, :stock, :genre_id)
+        params.require(:cd).permit(:cd_name, :artist_id, :image, :price, :label_id, :stock, :genre_id, :deleated)
+    end
+    def delete_cd_params
+        params.require(:cd).permit(:deleated)
     end
 end

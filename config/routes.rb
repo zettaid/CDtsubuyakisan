@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'public/users#top'
 
   namespace :admin do
-    resources :cds do
+    resources :cds, :except => :show do
       collection do
         get 'search' => 'cds#search'
       end
@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     resources :musics do
     end
     resources :genres do
+    end
+
+    resources :histories do
     end
     resources :users
   resources :shops

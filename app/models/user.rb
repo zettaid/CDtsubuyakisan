@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
-  has_many :cart
+
+  has_many :carts
   has_many :reviews
 
 

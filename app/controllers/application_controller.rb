@@ -4,11 +4,16 @@ class ApplicationController < ActionController::Base
 	helper_method :current_cart
 
 	def current_cart
-		if session[:cart_id]
-			@cart = Cart.find(session[:cart_id])
+		# ログインしているかどうかで分岐がきまる。
+		# if session[:cart_id]
+		# 	@cart = Cart.find(session[:cart_id])
+			# if user_signed_in?
+			# 	@cart.update(user_id: current_user.id)
+			# end
+
 		else
-			@cart = Cart.create
+			@cart = Cart.create(user_id: 1)
 			session[:cart_id] = @cart.id
 		end
 	end
-end
+# end

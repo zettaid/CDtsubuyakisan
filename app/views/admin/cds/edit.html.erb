@@ -1,5 +1,5 @@
 <div class="container">
-    <%= form_for(@cd, url: edit_admin_cd_path) do |f| %>
+    <%= form_for(@cd, url: admin_cd_path) do |f| %>
 	<h2>CD編集<h2>
         <label>CDジャケット画像</label><br>
         <div>
@@ -23,7 +23,7 @@
 
 		<label>在庫数</label><br>
 			<%= f.text_field :stock, class:"stock col-xs-12" %>個<br>
-            <%= f.submit "新規登録", class:"create_admin_cd btn btn-primary col-xs-12" %>
+            <%= f.submit "編集", class:"create_admin_cd btn btn-success col-xs-12" %>
 	<% end %>
 
 	<div id="cd-modal-artist" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -54,7 +54,7 @@
 		<h2>ジャンル名登録</h2>
 		<%= form_for(@genre, url: admin_genres_path) do |f| %>
 		<%= f.text_field :name, class:"genre_name col-xs-12" %>
-		<%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>
+		<%= f.submit "新規登録", class:"edit_admin_genre btn btn-primary col-xs-12" %>
 		<% end %>
 		</div>
 	</div>

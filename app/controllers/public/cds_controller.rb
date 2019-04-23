@@ -8,7 +8,13 @@ class Public::CdsController < ApplicationController
   end
 
   def show
-  	# @cd = Cd.find(params[:id])
+  	@cd = Cd.find(params[:id])
+    if @cd.deleated == true
+        redirect_to public_cds_path
+    else
+        @musics1 = @cd.musics.order("disk_number")
+        @musics = @musics1.order("track")
+    end
   	# @user = current_user
   end
 end
