@@ -1,77 +1,98 @@
-<div class="container">
-    <%= form_for(@music, url: admin_musics_path) do |f| %>
-	<div class="registration-title"><h2>CD収録曲登録<h2></div>
-        <div class="registration-left"><label>収録CD名</label></div>
-				<%= f.collection_select(:cd_id, Cd.all, :id, :cd_name) %>
-		<div class="registration-left"><label>曲名</label></div>
-		<form class="form-serialize">
-  <table id="form_set_1">
-    <tbody>
-      <tr>
-        <td><label for="music_disk_number_1">Disk番号</label></td>
-        <td><%= f.text_field :disk_number, class:"music_disk_number col-xs-12" %></td>
-      </tr>
-      <tr>
-        <td><label for="music_track_1">曲順</label></td>
-        <td><%= f.text_field :track, class:"music_track col-xs-12" %></td>
-      </tr>
-      <tr>
-        <td><label for="music_name">曲名</label></td>
-        <td><%= f.text_field :name, class:"music_name col-xs-12" %></td>
-      </tr>
-    </tbody>
-  </table>
-  <input type="button" value="入力フォームの追加" id="add_btn"><br>
-  <%= f.submit "新規登録", class:"create_admin_music btn btn-primary col-xs-12" %>
-</form>
-    <% end %>
+<div id="bg">
+<%= link_to 'CD一覧へ', admin_cds_path %>
+<h4 class="music-title">曲追加</h4>
+<div class="music-registration">
+    <form action="" class="form">
+        <label>収録CD名</label>
+                <%= select :music, :cd_id, @cds.map{|cd| [cd.cd_name, cd.id]} %>
+        <label> Disk番号 </label>
+        <input type="text" class="disk_number music-label">
+        <label> 順番 </label>
+        <input type="text" class="track music-label">
+        <label> 曲名 </label>
+        <input type="text" class="name music-label">
+        <input type="submit" value="追加" class="btn-sm btn-primary">
+    </form>
+</div>
+    <ul class="messages">
+    </ul>
+    <p class="err"></p>
+<div class="music-registration">
+     <input type="submit" id="total_submit" class="btn-sm btn-success" >
+</div>
+     <!-- ここでaxiosをcdnで入れてます -->
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // 要素取得
+        let musics = []
+        const newItemCd_id = document.querySelector("#music_cd_id")
+        const newItemDisk_number = document.querySelector(".disk_number")
+        const newItemTrack = document.querySelector(".track")
+        const newItem = document.querySelector(".name")
+        const form = document.querySelector(".form")
+        const err = document.querySelector(".err")
+        const messages = document.querySelector(".messages")
 
-<script>
-	$(function () {
-  var tbl_cnt = 1;
-  // 追加ボタンをクリックした時の処理
-  $('#add_btn').click(function () {
-    var original = $('#form_set_' + tbl_cnt);
-    tbl_cnt += 1;
-    // クローンを作成し、元の後ろに設置。
-    $(original)
-      .clone()
-      .insertAfter(original)
-      // クローンのid属性を変更。
-      .attr('id', 'form_set_' + tbl_cnt)
-      // label要素のfor属性を変更。
-      .find('label').each(function (idx, obj) {
-        $(obj).attr(
-          'for',
-          $(obj).attr('for').replace(/_[0-9]+$/, '_' + tbl_cnt)
-        );
-      })
-      .end()
-      // input要素のid,name属性を変更。value値を空白に。
-      .find('input').each(function (idx, obj) {
-        $(obj).attr({
-          id: $(obj).attr('id').replace(/_[0-9]+$/, '_' + tbl_cnt),
-          name: $(obj).attr('name').replace(/_[0-9]+$/, '_' + tbl_cnt)
-        }).val('');
-      });
-  });
-});
 
-/**
- * フォームの中身をアラートで表示する
- */
-$(function() {
-  $('.form-serialize').submit(function(ev) {
-    ev.preventDefault();
-    var arr = $(this).serializeArray();
-    console.log(arr);
-    var result = '';
-    $.each(arr, function(i, f) {
-      result += f.name + ': ' + f.value + '\n';
-    });
-    alert(result);
-  });
-});
-</script>
+        const addItem = () => {
+            form.addEventListener("submit", e => {
+                e.preventDefault()
+                if (newItem.value === "") {
+                    err.textContent = "文字を入力してね"
+                    return
+                } else {
+                    // 追加したアイテムの表示
+                    // JavaScript DOM操作
+                    err.textContent = ""
+                    const li = document.createElement("li")
+                    const li1 = document.createElement("span")
+                    const li2 = document.createElement("span")
+                    const li3 = document.createElement("span")
+                    const span = document.createElement("button")
+                    li.appendChild(li1)
+                    li.appendChild(li2)
+                    li.appendChild(li3)
+                    li1.textContent = newItemDisk_number.value
+                    li2.textContent = newItemTrack.value
+                    li3.textContent = newItem.value
+
+                    let music = {
+                        music: {
+                            cd_id: newItemCd_id.value,
+                            disk_number: newItemDisk_number.value,
+                            track: newItemTrack.value,
+                            name: newItem.value
+                        }
+                    }
+                    musics.push(music)
+                    messages.appendChild(li)
+                    newItemDisk_number.value = ""
+                    newItemTrack.value = ""
+                    newItem.value = ""
+                }
+            })
+        }
+
+        let total_submit = document.getElementById("total_submit")
+        total_submit.addEventListener("click", () => {
+
+            //ここでその曲の数だけaxiosでpostを叩く
+
+            axios.defaults.headers['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content')
+            axios.post(`/admin/musics/`, {"musics": musics}).then(()=> {
+                alert("曲追加できました")
+            })
+
+        })
+        addItem();
+    </script>
+<style>
+    span{
+        margin-right: 50px;
+    }
+</style>
+
+<!-- これはcd_idをselectさせていないですが,できるはずですので頑張ってください！ -->
+
