@@ -7,7 +7,7 @@
 <body>
 <div class="main">
 	<ul class="main-box">
-
+<
 <table>
 	<tr>
 		<th>商品名</th>
@@ -23,6 +23,15 @@
 			<td text-align:center;><font size="4"><%= (order.cd.price).to_i %>円</font></td>
 			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
 			<td text-align:center;><font size="4"><%= (order.total_price).to_i %>円</font></td>
+			<!-- orderの中に値が入っているとcreateアクション -->
+			<!-- orderの中に値が入っていないとupdateアクション -->
+			<%= form_for order, url: cart_path, method: :patch do|f| %>
+				<%= f.select :quantity, [1,2,3,4,5,6,7,8,9,10] %>
+				<%= f.submit "数量の変更を確定"%>
+			<% end %>
+
+
+
 			<%= link_to "削除",cart_path(@cart) %>
 		</tr>
 		<% end %>
