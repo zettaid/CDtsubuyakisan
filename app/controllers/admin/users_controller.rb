@@ -2,17 +2,24 @@ class Admin::UsersController < ApplicationController
 
 
     def show
-    	@user = User.find(params[:id])
+    	@user = User.find(1)
     	#管理者のマイページ
     end
 
     def index
-    	@users = User.search(params[:search])
-    	@users = User.where(activated: true)
+    	@user = current_user
+    	@users = User.where(activated: true).search(params[:search])
+        @cd_users = User.all
     end
 
+
+
+    def edit
+	    @user = User.find(1)
+	end
+
     def destroy
-    	@user = User.find(params[:id])
+    	@user = User.find(1)
         @user.destroy
         redirect_to users_index_path
     end

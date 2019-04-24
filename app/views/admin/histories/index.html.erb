@@ -1,11 +1,33 @@
 
+<p>検索</p>
+<%= form_tag(admin_histories_path,:method => 'get')do %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag 'Search', :cd_name => nil %>
+<% end %>
+
+
+<table>
+	<% if @search %>
+		<tr>
+		<% @search.orders.each do |o| %>
+			<td>
+				<% o.cart %>
+				<% h = o.cart.history %>
+				<%= h.title %>
+			</td>
+		<% end %>
+		</tr>
+	<% end %>
+</table>
+
 <table>
 	<tr>
 		<th>商品名</th>
 		<th>価格</th>
 		<th>数量</th>
 		<th>合計</th>
-
+		<th>状態</th>
+		<th></th>
 	</tr>
 
 <% @orders.each do |order| %>
@@ -15,11 +37,25 @@
 			<td text-align:center;><font size="4"><%= (order.cd.price).to_i %>円</font></td>
 			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
 			<td text-align:center;><font size="4"><%= (order.total_price).to_i %>円</font></td>
+			
+			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
+			<% history = History.find_by(cart_id:order.cart_id) %>
+			<!-- デフォルトのメソッドはpost -->
+			<%= form_for history, url:admin_history_path(history.id), method: :patch do |f| %>
+			<td>
+  				<%= f.select :status, History.statuses.keys, :selected => history.status %>
+  			</td>
+  			<td><%= f.submit "更新" %></td>
+  			<% end %>
 			<%#<%= link_to "削除",cart_path(@cart) %>
 		</tr>
 		<tr>
 
 			<td colspan="5"><font size="5">総計：<%= (order.cart.total_price).to_i %>円</font></td>
-		</tr>
+		<%# form_with(model: history, local: true) do |form| %>
+			<div class="field">
+			
+  			 </div>
+  		<%# end %>
 	</table>
 <% end %>

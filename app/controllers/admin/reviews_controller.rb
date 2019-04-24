@@ -24,6 +24,7 @@ class Admin::ReviewsController < ApplicationController
 
 	def index
 		@review = Review.new
+		
 	end
 
 	def update
@@ -31,8 +32,6 @@ class Admin::ReviewsController < ApplicationController
         @review.update(review_params)
 		redirect_to root_path
 	end
-
-	
 
 
 

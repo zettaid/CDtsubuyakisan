@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_18_011744) do
+ActiveRecord::Schema.define(version: 2019_04_22_121414) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name", null: false
@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 2019_04_18_011744) do
     t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "user_first_time"
     t.string "user_last_name"
     t.string "post_number"
+    t.string "user_first_name"
   end
 
   create_table "labels", force: :cascade do |t|
@@ -123,8 +123,16 @@ ActiveRecord::Schema.define(version: 2019_04_18_011744) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "name"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["address"], name: "index_users_on_address"
+    t.index ["email"], name: "index_users_on_email"
+    t.index ["encrypted_password"], name: "index_users_on_encrypted_password"
+    t.index ["first_name"], name: "index_users_on_first_name"
+    t.index ["first_name_kana"], name: "index_users_on_first_name_kana"
+    t.index ["last_name"], name: "index_users_on_last_name"
+    t.index ["last_name_kana"], name: "index_users_on_last_name_kana"
+    t.index ["phone_number"], name: "index_users_on_phone_number"
+    t.index ["post_number"], name: "index_users_on_post_number"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
 
 end
