@@ -1,5 +1,5 @@
  <p>レビュー編集</p>
- <%= form_for @review , :url => admin_review_path  do |f| %>
+ <%= form_for @review , :url => public_review_path  do |f| %>
 <%= attachment_image_tag @review, :image, :fill, 60, 60, class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg"%>
             <%= f.attachment_field :image %>
             <%= f.text_field :text, class: "form-control", placeholder: "投稿内容を入力" %>
