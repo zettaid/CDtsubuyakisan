@@ -8,11 +8,17 @@ class Admin::CdsController < ApplicationController
   end
 
   def index
+    if current_user.admin != true
+      redirect_to public_cds_path
+    end
     @cds = Cd.search(params[:search])
     @artists = Artist.all
   end
 
   def new
+    if current_user.admin != true
+      redirect_to public_cds_path
+    end
     @cd = Cd.new
     @artist = Artist.new
     @artists = Artist.all
@@ -23,6 +29,9 @@ class Admin::CdsController < ApplicationController
   end
 
   def create
+    if current_user.admin != true
+      redirect_to public_cds_path
+    end
     @cd = Cd.new(cd_params)
     if @cd.save
         flash[:notice] = "CD was successfully updated."
