@@ -1,10 +1,14 @@
 class Admin::HistoriesController < ApplicationController
-  def index
-    @history = History.search(params[:search])
+  def search
     search = params[:search]
-    @orders = Order.all
-    
+    @history = History.search(params[:search])
+  end
 
+
+  def index
+    # @history = History.search(params[:search])
+    # search = params[:search]
+    @orders = Order.all
     @carts = Cart.all
   end
 

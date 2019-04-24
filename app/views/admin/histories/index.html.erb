@@ -1,6 +1,6 @@
 
 <p>検索</p>
-<%= form_tag(admin_histories_path,:method => 'get')do %>
+<%= form_tag(search_admin_histories_path,:method => 'get')do %>
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag 'Search', :cd_name => nil %>
 <% end %>
