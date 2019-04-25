@@ -5,6 +5,10 @@ class Public::UsersController < ApplicationController
 
     def show
     	@user = User.find(params[:id])
+
+        @cart = Cart.find(params[:id])
+        @orders = @cart.orders
+
     	# ユーザのマイページ
     end
 

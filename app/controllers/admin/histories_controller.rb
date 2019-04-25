@@ -10,6 +10,7 @@ class Admin::HistoriesController < ApplicationController
     # search = params[:search]
     @orders = Order.all
     @carts = Cart.all
+    # @cart = Cart.find(params[:id])
   end
 
   def show

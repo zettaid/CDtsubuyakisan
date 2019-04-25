@@ -54,7 +54,16 @@ Rails.application.routes.draw do
 
     resources :reviews
 
+    resources :orders
+
+    resources :carts do
+      delete 'orders/:id' => 'carts#delete_order',as: 'order_delete'
+      get 'confirm' => 'carts#confirm'
+    end
+
   end
+
+  resources :orders
 
   resources :carts do
     delete 'orders/:id' => 'carts#delete_order',as: 'order_delete'
