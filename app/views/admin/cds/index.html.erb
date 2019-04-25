@@ -1,24 +1,27 @@
-<div id="nav-search">
+<div id="bg">
+<div id="nav-search" class="cd-search">
     <%= form_tag '/admin/cds', :method => 'get' do %>
         <p>
             <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "検索", :cd_name => nil %>
+            <%= submit_tag "Search", :cd_name => nil, class:"cd-search-button" %>
         </p>
     <% end %>
-
-    <table class="table table-hover table-inverse">
+    <table class="cd-table table-hover table-inverse col-xs-12">
 	<thead>
 			<tr>
 				<th></th>
-				<th>title</th>
-				<th>artist name</th>
-				<th>price</th>
+				<th>アルバム/シングル名</th>
+				<th>アーティスト名</th>
+				<th>価格</th>
+				<th></th>
+				<th></th>
+				<th></th>
 			</tr>
 	</thead>
 	<tbody>
-			<% @cds.each do |cd| %>
+		<% @cds.each do |cd| %>
 			<tr>
-				<td><%= attachment_image_tag cd, :image, :fill, 40, 40, fallback: "no_image.jpg",size: '40x40' %></td>
+				<td><%= attachment_image_tag cd, :image, :fill, 40, 40, fallback: "no_image.jpg",size: '40x40', class:"index-image" %></td>
 				<td><%= cd.cd_name %></td>
 				<td><%= cd.artist.name %></td>
 				<td><%= cd.price %> 円</td>
@@ -26,7 +29,17 @@
 				<td><%= link_to '編集', edit_admin_cd_path(cd.id), class:"btn-sm btn-success" %></td>
 				<td><%= link_to "削除", admin_cd_path(cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %></td>
 			</tr>
-			<% end %>
+		<% end %>
 	</tbody>
+    </table>
 </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="shards.js"></script>
+<script>
+(function($) {
+  $('#bg').shards([10,35,180,.15],[255,20,220,.25],[0,0,0,.25],20,.58,2,.15,true);
+})(jQuery);
+</script>
 

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'public/users#top'
   get 'user_index' => 'admin/users#', as: 'users'
 
+
   namespace :admin do
     resources :cds, :except => :show do
       collection do
@@ -20,8 +21,10 @@ Rails.application.routes.draw do
     resources :genres do
     end
 
-
     resources :users, only: [:show, :index, :edit, :update, :destroy] do
+      collection do
+        get 'search' => 'users#search'
+      end
     end
 
     resources :shops
@@ -49,6 +52,9 @@ Rails.application.routes.draw do
     end
 
     resources :users, only: [:show, :edit, :update, :destroy] do
+      collection do
+        get 'search' => 'users#search'
+      end
     end
 
 

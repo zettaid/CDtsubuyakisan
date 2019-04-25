@@ -56,6 +56,5 @@
         <% end %>
 
         <% if @user == current_user %>
-
-        	   <%= link_to "退会", root_path(@user.id), class: "destroy_#{@user.id}", method: :delete, "data-confirm" => "本当に消しますか？" %>
+        	   <%= link_to "退会", root_path(@user.id, :user => {:deleated => 'true'}), method: :delete,class:"destroy_#{@user.id}", "data-confirm" => "本当に退会しますか？" %>
         <% end %>
