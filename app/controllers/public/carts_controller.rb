@@ -1,4 +1,4 @@
-class CartsController < ApplicationController
+class Public::CartsController < ApplicationController
 	# application_controller.rbで設定したcurrent_cartメソッドを呼んでいる。そこで@cartを設定しているので@cartを呼ぶ必要はない。
 
 		def show
