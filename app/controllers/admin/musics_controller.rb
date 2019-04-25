@@ -9,11 +9,13 @@ class Admin::MusicsController < ApplicationController
 
   def create
     musics = musics_params
+    cd_id = 0
     musics.each do |music|
       m = Music.new(music_params(music))
+      cd_id = m.cd_id
       m.save
     end
-    redirect_to public_cds_path
+    render :json => {'cd_id' => cd_id}
   end
 
   def edit
