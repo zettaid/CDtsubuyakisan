@@ -4,7 +4,7 @@
 <div class="music-registration">
     <form action="" class="form">
         <label>収録CD名</label>
-                <%= select :music, :cd_id, @cds.map{|cd| [cd.cd_name, cd.id]} %>
+                <%= select :music, :cd_id, @cds.map{|cd| [cd.cd_name, cd.id]}, class:"select-cd" %>
         <label> Disk番号 </label>
         <input type="text" class="disk_number music-label">
         <label> 順番 </label>
@@ -14,9 +14,11 @@
         <input type="submit" value="追加" class="btn-sm btn-primary">
     </form>
 </div>
+<div class="message-box">
     <ul class="messages">
     </ul>
     <p class="err"></p>
+</div>
 <div class="music-registration">
      <input type="submit" id="total_submit" class="btn-sm btn-success" >
 </div>
