@@ -16,9 +16,9 @@
 			</tr>
 	</thead>
 	<tbody>
-			<% @cds.each do |cd| %>
+		<% @cds.each do |cd| %>
 			<tr>
-				<td><%= attachment_image_tag cd, :image, :fill, 40, 40, fallback: "no_image.jpg",size: '40x40' %></td>
+				<td><%= attachment_image_tag cd, :image, :fill, 40, 40, fallback: "no_image.jpg",size: '40x40' class:"index-image" %></td>
 				<td><%= cd.cd_name %></td>
 				<td><%= cd.artist.name %></td>
 				<td><%= cd.price %> 円</td>
@@ -26,7 +26,7 @@
 				<td><%= link_to '編集', edit_admin_cd_path(cd.id), class:"btn-sm btn-success" %></td>
 				<td><%= link_to "削除", admin_cd_path(cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %></td>
 			</tr>
-			<% end %>
+		<% end %>
 	</tbody>
 </div>
 
