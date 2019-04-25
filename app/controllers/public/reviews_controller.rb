@@ -1,24 +1,63 @@
 class Public::ReviewsController < ApplicationController
 
-	def edit
+def new
+		@review = Review.new
+    end
+
+	def create
+		@review = Review.new(review_params)
+		@user = current_user
+		@review.user_id = current_user.id
+		@review.cd_id = 1
+	 if @review.save
+		redirect_to root_path
+     else
+      	redirect_to root_path
+      end
 	end
 
-	def update
+
+	def edit
+		@review = Review.find(params[:id])
 	end
 
 	def index
-		@review = Review.new
-
-	def create
-	    @review = Review.new(review_params)
-	    if  @review.save
-		    render :success
-		
-	    end
+		@user = current_user
+		@reviews = @user.reviews.all
 	end
 
+	def update
+		@review = Review.find(params[:id])
+		@user = User.first
+		@review.user_id = @user.id
+      if  @review.update(review_params)
+		redirect_to root_path
+	  else
+      	redirect_to root_path
+      end
+	end
 
-    private
-	def review_params
+	def show
+	end
+
+	def destroy
+   	    @review = Review.find(params[:id])
+   	    @review.destroy
+   	    redirect_to root_path
+    end
+
+    def edit
+    	@review = Review.find(params[:id])
+
+    end
+
+
+
+
+
+	private
+
+    def review_params
 	 	params.require(:review).permit(:image, :text, :user_id, :cd_id, :deleated)
     end
+end

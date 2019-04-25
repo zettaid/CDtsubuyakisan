@@ -30,6 +30,9 @@ Rails.application.routes.draw do
     resources :shops
     resources :reviews
     resources :histories do
+      collection do
+        get 'search' => 'histories#search'
+      end
     end
   end
 
@@ -60,6 +63,7 @@ Rails.application.routes.draw do
   end
 
   resources :carts do
+    delete 'orders/:id' => 'carts#delete_order',as: 'order_delete'
     get 'confirm' => 'carts#confirm'
   end
 

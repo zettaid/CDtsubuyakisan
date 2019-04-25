@@ -6,16 +6,19 @@ class ApplicationController < ActionController::Base
 
 	def current_cart
 		# ログインしているかどうかで分岐がきまる。
-		# if session[:cart_id]
-		# 	@cart = Cart.find(session[:cart_id])
+		if session[:id]
+			@cart = Cart.find(session[:id])
 			# if user_signed_in?
 			# 	@cart.update(user_id: current_user.id)
 			# end
+			redirect_to cart_path(@cart)
 
 		else
 			@cart = Cart.create(user_id: 1)
 			session[:cart_id] = @cart.id
 		end
+
+	end
 
 	protected
 
@@ -23,6 +26,5 @@ class ApplicationController < ActionController::Base
 		devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :post_number, :adress, :phone_number, :email])
 	end
 
-end
 
-# end
+end

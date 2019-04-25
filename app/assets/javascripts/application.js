@@ -13,5 +13,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery
+//= require jquery_ujs
+//= require_tree ../../../vendor/assets/javascripts/.
 //= require bootstrap-sprockets
+//= require cocoon
 //= require_tree .

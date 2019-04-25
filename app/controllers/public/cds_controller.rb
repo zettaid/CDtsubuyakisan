@@ -9,6 +9,7 @@ class Public::CdsController < ApplicationController
 
   def show
   	@cd = Cd.find(params[:id])
+    @reviews = Review.where(cd_id: @cd.id)
     if @cd.deleated == true
         redirect_to public_cds_path
     else

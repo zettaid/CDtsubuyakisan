@@ -1,12 +1,20 @@
 <%= link_to '戻る', :back %>
-<%= link_to '商品一覧', public_cds_path %>
-<%= link_to '管理者用商品一覧', admin_cds_path %>
+<% if current_user.admin == true %>
+    <%= link_to '管理者用商品一覧', admin_cds_path %>
+<% else %>
+    <%= link_to '商品一覧', public_cds_path %>
+<% end %>
 <div class="col-xs-6">
 	<%= attachment_image_tag @cd, :image, :fill, 500, 500, fallback:"no_image.jpg",size: '500x500' %>
 </div>
 <div class="col-xs-6">
 		<h3>商品名</h3>
 		<%= @cd.cd_name %>
+		<% if current_user.admin == true %>
+		    <%= link_to "編集", edit_admin_cd_path(@cd.id), class:"edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
+	       	<%= link_to "削除", admin_cd_path(@cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %><br><br>
+			<%= link_to '曲登録', new_admin_music_path, class:"new_admin_cd btn-sm btn-success" %><br><br>
+	    <% end %>
 		<h3>アーティスト</h3>
 		<%= @cd.artist.name %>
 		<h3>レーベル</h3>
@@ -28,11 +36,10 @@
 				<td>Disk.<%= musics.disk_number %></td>
 				<td><%= musics.track %>.</td>
 				<td><%= musics.name %></td>
-				<td><%= link_to "Destroy", admin_music_path(musics.id), method: :delete, class:"destroy_music_#{musics.id} btn-sm btn-danger", "data-confirm" => "曲を削除します。よろしいですか？" %></td><br>
+				<% if current_user.admin == true %>
+				    <td><%= link_to "Destroy", admin_music_path(musics.id), method: :delete, class:"destroy_music_#{musics.id} btn-sm btn-danger", "data-confirm" => "曲を削除します。よろしいですか？" %></td>
+				<% end %><br>
 			</tr>
 		</tbody>
 		<% end %>
-		<%= link_to '曲登録', new_admin_music_path, class:"new_admin_cd btn-sm btn-success" %><br><br>
-		<%= link_to "編集", edit_admin_cd_path(@cd.id), class:"edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
-       	<%= link_to "削除", admin_cd_path(@cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %>
 </div>
