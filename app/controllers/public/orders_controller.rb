@@ -5,7 +5,7 @@ class Public::OrdersController < ApplicationController
 	def update
 		@order = Order.find(params[:id])
 		@order.update(order_params)
-		redirect_to cart_path(@order.cart_id)
+		redirect_to public_cart_path(@order.cart_id)
 	end
 
 
