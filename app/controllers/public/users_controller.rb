@@ -5,9 +5,9 @@ class Public::UsersController < ApplicationController
 
     def show
     	@user = User.find(params[:id])
-
         @cart = Cart.find(params[:id])
         @orders = @cart.orders
+        @sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 
     	# ユーザのマイページ
     end

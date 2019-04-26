@@ -6,6 +6,7 @@ class Public::CartsController < ApplicationController
 				# @orders = @cart.orders
 				@cart = Cart.find(params[:id])
 				@orders = @cart.orders
+        		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
 
 		end
@@ -27,7 +28,7 @@ class Public::CartsController < ApplicationController
 		def update
 			@order = Order.find(params[:id])
 			@order.update(order_params)
-			redirect_to cart_path(@order)
+			redirect_to public_cart_path(@order)
 		end
 
 		def destroy
@@ -38,7 +39,7 @@ class Public::CartsController < ApplicationController
 			#論理削除されユーザーに新しいカートが付与される。（今までのカートから切り替わる。）
 			# @extracart = Cart.new
 			# binding.pry
-			redirect_to cart_confirm_path(@cart)
+			redirect_to public_cart_confirm_path(@cart)
 		end
 
 		# カート内商品の削除(orderの削除)に関するメソッド
@@ -49,7 +50,7 @@ class Public::CartsController < ApplicationController
 			# binding.pry
 			@order.destroy
 			# redirect_to current_cart
-			redirect_to cart_path(@cart.id)
+			redirect_to public_cart_path(@cart.id)
 		end
 
 		def confirm

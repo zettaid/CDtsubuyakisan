@@ -1,60 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheets" href="carts.scss">
-	<title></title>
-</head>
-<body>
 <div class="main">
-	<ul class="main-box">
-<
-<table>
-	<tr>
-		<th>商品名</th>
-		<th>価格</th>
-		<th>数量</th>
-		<th>合計</th>
-
-	</tr>
-		<% @cart.orders.each do |order| %>
-		<tr>
-			<%#<td text-align:center;><img height="80" src="<%=h item.good.image_url "/></td%> 
-			<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
-			<td text-align:center;><font size="4"><%= (order.cd.price).to_i %>円</font></td>
-			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
-			<td text-align:center;><font size="4"><%= (order.total_price).to_i %>円</font></td>
-			<!-- orderの中に値が入っているとcreateアクション -->
-			<!-- orderの中に値が入っていないとupdateアクション -->
-			<!-- form_for の場合はネストする。削除と同じやり方-->
-			<%# form_for order, url: cart_path, method: :patch do|f| %>
-			<%= form_with(model: order, url: order_path(order.id)) do |f| %>
-				<%= f.select :quantity, [1,2,3,4,5,6,7,8,9,10] %>
-				<%= f.submit "数量の変更を確定"%>
+		<table>
+			<tr>
+				<th>商品名</th>
+				<th>価格</th>
+				<th>数量</th>
+				<th>合計</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<% @cart.orders.each do |order| %>
+				<tr>
+					<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
+					<td text-align:center;><font size="4"><%= (order.cd.price).to_s(:delimited) %>円</font></td>
+					<td text-align:center;><font size="4"><%= order.quantity %></font></td>
+					<td text-align:center;><font size="4"><%= (order.total_price).to_s(:delimited) %>円</font></td>
+					<!-- orderの中に値が入っているとcreateアクション -->
+					<!-- orderの中に値が入っていないとupdateアクション -->
+					<!-- form_for の場合はネストする。削除と同じやり方-->
+					<td>
+						<%= form_with(model: order, url: public_order_path(order.id)) do |f| %>
+							<%= f.select :quantity, [1,2,3,4,5,6,7,8,9,10] %>
+							<%= f.submit "数量の変更を確定"%>
+						<% end %>
+					</td>
+					<!-- orderとcartのidをcart_order_deleteメソッドに渡す必要がある -->
+					<td><%= link_to "削除",public_cart_order_delete_path(@cart.id,order.id), method: :delete %></td>
+				</tr>
 			<% end %>
-
-
-			<!-- orderとcartのidをcart_order_deleteメソッドに渡す必要がある -->
-			<%= link_to "削除",cart_order_delete_path(@cart.id,order.id), method: :delete %>
-		</tr>
-		<% end %>
-
-		<tr>
-			<td colspan="5"><font size="5">総計：<%= (@cart.total_price).to_i %>円</font></td>
-		</tr>
-
-		<%= link_to "注文確定",cart_path(@cart.id), method: :delete%><br>
-		
-
-</table>
-
-
-
-
-<footer></footer><!-- /header -->
-
-
-</body>
-</html>
-
-
-
+		</table>
+	<font size="5">総計：<%= @sum %>円</font>
+	<%= link_to "注文確定",public_cart_path(@cart.id), method: :delete%><br>
+</div>

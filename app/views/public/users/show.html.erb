@@ -9,7 +9,7 @@
 
 
 
-		<table>
+<table border="1">
 	<tr>
 		<th>商品名</th>
 		<th>価格</th>
@@ -23,31 +23,27 @@
 		<tr>
 			<%#<td text-align:center;><img height="80" src="<%=h item.good.image_url "/></td%> 
 			<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
-			<td text-align:center;><font size="4"><%= (order.cd.price).to_i %>円</font></td>
+			<td text-align:center;><font size="4"><%= (order.cd.price).to_s(:delimited) %>円</font></td>
 			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
-			<td text-align:center;><font size="4"><%= (order.total_price).to_i %>円</font></td>
+			<td text-align:center;><font size="4"><%= (order.total_price).to_s(:delimited) %>円</font></td>
 			
 			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
 			<% history = History.find_by(cart_id:order.cart_id) %>
 			<!-- デフォルトのメソッドはpost -->
-			<%= form_for history, url:admin_history_path(history.id), method: :patch do |f| %>
 			<td>
-  				<%= f.select :status, History.statuses.keys, :selected => history.status %>
+  				<%= history.status %>
   			</td>
-  			<td><%= f.submit "更新" %></td>
-  			<% end %>
-			<%#<%= link_to "削除",cart_path(@cart) %>
 		</tr>
-		<tr>
 
-			<td colspan="5"><font size="5">総計：<%= (order.cart.total_price).to_i %>円</font></td>
+			<!-- <td colspan="5"><font size="5">総計：<%= @sum %>円</font></td> -->
 		<%# form_with(model: history, local: true) do |form| %>
-			<div class="field">
-			
-  			 </div>
   		<%# end %>
-	</table>
-<% end %>
+	
+ <% end %>
+</table>
+<span>
+	<font size="5">総計：<%= @sum %>円</font>
+</span>
 
 
 
