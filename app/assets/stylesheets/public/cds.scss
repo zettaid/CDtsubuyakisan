@@ -1,3 +1,38 @@
 // Place all the styles related to the public/cds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cd-image {
+	padding: 20px;
+	float: left;
+}
+
+.cd-edit-text {
+	padding: 10px;
+	font-size: 20px;
+}
+
+.cd-detail-button {
+	margin-bottom: 20px;
+}
+
+.detail-table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.detail-table tr:hover{
+  background-color: #d4f0fd;
+}
+
+.detail-table th,.detail-table td{
+  text-align: center;
+  width: 25%;
+  padding: 5px 0;
+}
+
+.cd-detail {
+	text-align: left;
+	float: right;
+}

@@ -5,6 +5,10 @@ class Public::UsersController < ApplicationController
 
     def show
     	@user = User.find(params[:id])
+        @cart = Cart.find(params[:id])
+        @orders = @cart.orders
+        @sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
+
     	# ユーザのマイページ
     end
 
@@ -30,10 +34,11 @@ class Public::UsersController < ApplicationController
 
 
     private
-
-    def user_params
-    	params.require(:user).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :post_number, :address, :phone_number, :email)
-    end
-
+        def user_params
+        	params.require(:user).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :post_number, :address, :phone_number, :email)
+        end
+        def delete_user_params
+            params.require(:user).permit(:deleated)
+        end
 
 end
