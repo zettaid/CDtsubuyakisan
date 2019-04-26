@@ -10,6 +10,7 @@ class History < ApplicationRecord
 			# 配列作成
 			# @histories = []
 			# Cdモデルのcd_nameを検索対象にする作業
+			# @search = Cd.where(['cd_name LIKE ?', "%#{search}%"])
 			@search = Cd.where(['cd_name LIKE ?', "%#{search}%"])
 			# @search.orders.each do |order|
 			# 	his = History.where(cart_id: order.cart_id)
