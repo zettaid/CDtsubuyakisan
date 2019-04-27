@@ -36,3 +36,27 @@
 	text-align: left;
 	float: right;
 }
+
+.cd-table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 90%;
+}
+
+.cd-table tr{
+  border-bottom: solid 1px #eee;
+  border-top: solid 1px #eee;
+}
+
+.cd-table tr:hover{
+  background-color: #d4f0fd;
+}
+
+.cd-table th,.cd-table td{
+  text-align: center;
+  padding: 5px 0;
+}
+
+.cd-search {
+	padding: 10px;
+}

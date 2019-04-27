@@ -71,3 +71,13 @@
 	width: 150px;
 	text-align: center;
 }
+
+.music-body {
+	background: linear-gradient(-45deg, rgba(0,34,143, .8), rgba(138,102,255, .8)) fixed, image-url('CD.jpg') fixed;
+    background-size: cover;
+}
+
+.cd-edit-body {
+	background: linear-gradient(-45deg, rgba(0,34,143, .8), rgba(138,102,255, .8)) fixed, image-url('Music.jpg') fixed;
+    background-size: cover;
+}
