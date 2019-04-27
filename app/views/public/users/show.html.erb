@@ -8,6 +8,45 @@
 				<div class="mypage-item"><%= @email %></div>
 
 
+
+<table border="1">
+	<tr>
+		<th>商品名</th>
+		<th>価格</th>
+		<th>数量</th>
+		<th>合計</th>
+		<th>状態</th>
+		<th></th>
+	</tr>
+
+<% @orders.each do |order| %>
+		<tr>
+			<%#<td text-align:center;><img height="80" src="<%=h item.good.image_url "/></td%> 
+			<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
+			<td text-align:center;><font size="4"><%= (order.cd.price).to_s(:delimited) %>円</font></td>
+			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
+			<td text-align:center;><font size="4"><%= (order.total_price).to_s(:delimited) %>円</font></td>
+			
+			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
+			<% history = History.find_by(cart_id:order.cart_id) %>
+			<!-- デフォルトのメソッドはpost -->
+			<td>
+  				<%= history.status %>
+  			</td>
+		</tr>
+
+			<!-- <td colspan="5"><font size="5">総計：<%= @sum %>円</font></td> -->
+		<%# form_with(model: history, local: true) do |form| %>
+  		<%# end %>
+	
+ <% end %>
+</table>
+<span>
+	<font size="5">総計：<%= @sum %>円</font>
+</span>
+
+
+
 		<% if @user == current_user %>
         		<%= link_to "編集", edit_public_user_path(@user.id), class:"btn-sm btn-success" %>
         <% end %>

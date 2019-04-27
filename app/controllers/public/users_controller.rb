@@ -4,12 +4,16 @@ class Public::UsersController < ApplicationController
     end
 
     def show
-    	@user = User.find(params[:id])
-    	# ユーザのマイページ
+        	@user = User.find(params[:id])
+            @cart = Cart.find(params[:id])
+            @orders = @cart.orders
+            @sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
+
+        	# ユーザのマイページ
     end
 
 	def edit
-	    @user = User.find(params[:id])
+	       @user = User.find(params[:id])
 		   if current_user.id == @user.id || current_user.admin == true
 		    else
 	        # redirect_to edit_public_user_path
@@ -17,23 +21,23 @@ class Public::UsersController < ApplicationController
     end
 
     def update
-    	@user = User.find(params[:id])
-        @user.update(user_params)
-        redirect_to public_user_path(@user.id)
+        	@user = User.find(params[:id])
+            @user.update(user_params)
+            redirect_to public_user_path(@user.id)
     end
 
     def destroy
-    	@user = current_user
-        @user.destroy
-        if current_user.id == @user.id || current_user.admin == true
-        end
-        redirect_to root_path
+        	@user = current_user
+            @user.destroy
+            if current_user.id == @user.id || current_user.admin == true
+            end
+            redirect_to root_path
     end
 
     def delete
-        @user = current_user
-        if current_user.id == @user.id || current_user.admin == true
-        end
+            @user = current_user
+            if current_user.id == @user.id || current_user.admin == true
+            end
     end
 
 

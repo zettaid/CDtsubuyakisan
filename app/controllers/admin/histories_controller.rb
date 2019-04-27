@@ -10,6 +10,8 @@ class Admin::HistoriesController < ApplicationController
     # search = params[:search]
     @orders = Order.all
     @carts = Cart.all
+    @sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
+    # @cart = Cart.find(params[:id])
   end
 
   def show

@@ -1,4 +1,4 @@
-<div id="bg">
+<div class="music-body">
 <%= link_to 'CD一覧へ', admin_cds_path %>
 <h4 class="music-title">曲追加</h4>
 <div class="music-registration">
@@ -83,8 +83,9 @@
             //ここでその曲の数だけaxiosでpostを叩く
 
             axios.defaults.headers['X-CSRF-TOKEN'] = $('meta[name=csrf-token]').attr('content')
-            axios.post(`/admin/musics/`, {"musics": musics}).then(()=> {
-                alert("曲追加できました")
+            axios.post(`/admin/musics/`, {"musics": musics}).then((json)=> {
+                console.log(json)
+                location.href="/public/cds/" + json["data"]["cd_id"]
             })
 
         })
