@@ -23,9 +23,17 @@ class Public::UsersController < ApplicationController
     end
 
     def destroy
-    	@user = User.find(params[:id])
+    	@user = current_user
         @user.destroy
+        if current_user.id == @user.id || current_user.admin == true
+        end
         redirect_to root_path
+    end
+
+    def delete
+        @user = current_user
+        if current_user.id == @user.id || current_user.admin == true
+        end
     end
 
 

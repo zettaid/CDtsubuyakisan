@@ -54,6 +54,8 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :edit, :update, :destroy] do
       collection do
         get 'search' => 'users#search'
+        get 'destroy' => 'users#destroy',as: 'user_destroy'
+        get 'delete' => 'users#delete', as: 'user_delete'
       end
     end
 

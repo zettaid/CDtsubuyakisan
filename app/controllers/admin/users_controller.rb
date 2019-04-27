@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
     def search
-        if @users = User.search(params[:search])
+        if @cd_users = User.search(params[:search])
             flash[:notice] = "検索結果"
         else
         end
@@ -13,8 +13,11 @@ class Admin::UsersController < ApplicationController
 
     def index
     	@user = current_user
-    	@users = User.where(activated: true).search(params[:search])
-        @cd_users = User.all
+    	@cd_users = if params[:search]
+            User.search(params[:search])
+        else
+            User.all
+        end
         #会員一覧ページ
     end
 
@@ -26,6 +29,10 @@ class Admin::UsersController < ApplicationController
     	@user = User.find(params[:id])
         @user.destroy
         redirect_to admin_users_path
+    end
+
+    def delete
+        @user = current_user
     end
 
     private

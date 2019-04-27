@@ -1,5 +1,5 @@
-delete.html.erb
+退会ページ
 <% if @user == current_user %>
 
-	   <%= link_to "退会", root_path(@user.id, :user => {:deleated => 'true'}), method: :delete,class:"destroy_#{@user.id}", "data-confirm" => "本当に退会しますか？" %>
+	   <%= link_to "退会", user_destroy_public_users_path(current_user.id, :user => {:deleted => 'true'}), method: :delete,class:"destroy_#{@user.id}  btn-sm btn-danger", "data-confirm" => "本当に退会しますか？" %>
 <% end %>

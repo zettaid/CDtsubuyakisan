@@ -15,4 +15,66 @@
  */
  	@import "bootstrap-sprockets";
     @import "bootstrap";
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    background-color:rgba(0,153,255,0.9);
+}
 
+.navbar-nav li a {
+	color: #fff;
+}
+
+header {
+    color: white;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:rgba(0,153,255,0.9);
+
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+
+}
+
+.header-link {
+	text-decoration: none;
+	color: #fff;
+}
