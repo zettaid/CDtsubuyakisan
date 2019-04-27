@@ -10,8 +10,9 @@ class Public::CdsController < ApplicationController
 
   def show
     @review = Review.new
-    @user = current_user
-    @reviews = @user.reviews.all
+    if signed_in?
+      @user = current_user
+    end
   	@cd = Cd.find(params[:id])
     @reviews = Review.where(cd_id: @cd.id)
     if @cd.deleated == true
