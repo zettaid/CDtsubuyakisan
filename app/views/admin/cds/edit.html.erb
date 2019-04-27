@@ -12,7 +12,7 @@
 				<%= f.text_field :cd_name, class:"cd_name" %>
 			</div><br>
 		<label>アーティスト名</label>
-		    <div class="edit-text">
+		    <div class="edit-pull">
 				<%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
 			</div>
 			<div class="edit-text">
@@ -23,14 +23,14 @@
 			    <%= f.text_field :price, class:"price" %> 円
 			</div><br>
 		<label>レーベル</label><br>
-		    <div class="edit-text">
+		    <div class="edit-pull">
 		        <%= f.collection_select(:label_id, Label.all, :id, :name) %>
 		    </div>
 		    <div class="edit-text">
                 <div id="label_button" class="edit-registration-button btn-sm btn-success">レーベル新規登録</div>
             </div><br>
 		<label>CDジャンル</label><br>
-		    <div class="edit-text">
+		    <div class="edit-pull">
 		        <%= f.collection_select(:genre_id, Genre.all, :id, :name) %>
 		    </div>
             <div id="genre_button" class="edit-registration-button btn-sm btn-success">CDジャンル新規登録</div><br>
@@ -39,8 +39,11 @@
 		    <div class="edit-text">
 			    <%= f.text_field :stock, class:"stock" %> 個
 		    </div><br>
-            <%= f.submit "編集", class:"create_admin_cd btn btn-success" %>
+            <%= f.submit "編集", class:"edit-admin-cd btn-sm btn-success registration-button" %>
 	<% end %>
+    </div>
+</div>
+</div>
 
 	<div id="cd-modal-artist" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog">
