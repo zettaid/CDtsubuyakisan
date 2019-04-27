@@ -5,12 +5,12 @@ def new
     end
 
 	def create
-		@review = Review.new(review_params)
-		@user = current_user
-		@review.user_id = current_user.id
-		@review.cd_id = 1
+		# cd = Cd.find(params[:id])
+		@review = current_user.reviews.new(review_params)
+		@review.cd_id = params[:review][:cd_id].to_i
+		# review.cd_id = cd
 	 if @review.save
-		redirect_to root_path
+		redirect_to public_cd_path
      else
       	redirect_to root_path
       end
