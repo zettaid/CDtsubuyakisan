@@ -10,7 +10,7 @@ class Public::CartsController < ApplicationController
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
 				else
-					redirect_to roguin_path
+					redirect_to root_path
 				end
 
 		end
@@ -25,8 +25,8 @@ class Public::CartsController < ApplicationController
 
 			# if @order.blank?
 			if current_cart != nil
-
-			   @order = current_cart.orders.build(cd_id:  params[:cd][:cd_id].to_i)
+			   cd = Cd.find(params[:cd][:cd_id].to_i)
+			   @order = current_cart.orders.build(cd_id:  cd.id, price: cd.price)
 			   # todo: cd_id(hiddenフィールド)をform_forで商品詳細画面でコードを描いてもらう。
 			   	p "==============="
 				p @order
@@ -46,8 +46,9 @@ class Public::CartsController < ApplicationController
 
 
 
-		def edit
-		end
+		# def edit
+		# end
+
 		def update
 			@order = Order.find(params[:id])
 			@order.update(order_params)

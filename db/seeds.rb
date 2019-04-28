@@ -10,10 +10,12 @@
 
 
 # User.create(:email => 'aa@aa', :first_name => '絶対', :last_name => 'D',:first_name_kana => 'ゼッタイ' , :last_name_kana => 'ディー', :post_number => '000-0000', :phone_number => '000-000-0000', :password => '111111', :address => '東京都新宿区', :admin => 'true' )
-Cd.create(:artist_id => 1, :cd_name => 'ishizawa', :image_id => 1, :price => 1000,  :label_id => 1, :stock => 1, :genre_id => 1)
-Cd.create(:artist_id => 1, :cd_name => 'zawa', :image_id => 1, :price => 2000,  :label_id => 1, :stock => 1, :genre_id => 1)
+# Cd.create(:artist_id => 1, :cd_name => 'ishizawa', :image_id => 2, :price => 1000,  :label_id => 1, :stock => 1, :genre_id => 1)
+# Cd.create(:artist_id => 2, :cd_name => 'zawa', :image_id => 1, :price => 2000,  :label_id => 1, :stock => 1, :genre_id => 1)
 # Arthist.create(:)
 # Cart.create(:user_id =>1)
 # Order.create(:price => 1000, :cart_id => 3, :quantity => 1, :cd_id => 1)
 # Order.create(:price => 2000, :cart_id => 4, :quantity => 2, :cd_id => 2)
 # History.create(:cart_id => 1, :status => 0)
+Shop.create(:name => 'isi', :body => 'sssss', :master => '石井', :post_number => '111111', :address => '分拠区', :phone_number => '00000000000', :email => 'ijijsijiji@kk' )
+

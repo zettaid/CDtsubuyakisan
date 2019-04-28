@@ -1,6 +1,7 @@
 class History < ApplicationRecord
 	belongs_to :cart
 
+	#「合計」を出すメソッド
 	def total_price
 		orders.to_a.sum{ |order| order.total_price}
 	end
