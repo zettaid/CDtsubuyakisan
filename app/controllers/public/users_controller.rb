@@ -7,14 +7,12 @@ class Public::UsersController < ApplicationController
     end
 
     def show
-    	   
             @user = User.find(params[:id])
             @carts = Cart.where(user_id:current_user.id,deleted: false)
             # @orders = @cart.orders
             # <!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
             # @history = History.find_by(cart_id:@cart.id)
             # @sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
-        
     	# ユーザのマイページ
 
     end
