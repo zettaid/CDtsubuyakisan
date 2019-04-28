@@ -33,8 +33,10 @@ header {
     color: white;
 }
 
-header .header-item {
+nav.header-item {
     margin-bottom: 0;
+    width: 10px;
+
 }
 
 body {
@@ -60,6 +62,7 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+    float: left;
 }
 .nav>li {
     position: relative;
@@ -72,23 +75,29 @@ ul, td {
     font-size: 13px;
     line-height: 18px;
     margin: 30px;
+    float: right;
 }
 li {
     display: list-item;
     text-align: -webkit-match-parent;
-    float: right;
+    float: left;
+
 }
 
-
-.header-link {
+.header-link, .header-list {
 	text-decoration: none;
 	color: #fff;
+  margin: 10px;
+}
+
+.header-page{
+  float: right;
 }
 
 
 .timeline {
- float: left;
- width: 1000px;
+  float: left;
+  width: 1000px;
 }
 
 .sidebar {
