@@ -11,7 +11,6 @@ class Public::ApplicationController < ActionController::Base
 			# 	@cart.update(user_id: current_user.id)
 			# end
 			redirect_to cart_path(@cart)
-
 		else
 			@cart = Cart.create(user_id: 1)
 			session[:cart_id] = @cart.id

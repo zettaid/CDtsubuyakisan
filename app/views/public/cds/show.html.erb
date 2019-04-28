@@ -11,12 +11,22 @@
 		<h3>商品名</h3>
 		<%= @cd.cd_name %>
 		    <div class="cd-detail-button">
-		        <%=link_to "カートに入れる", carts_path(@cd.id), class:"btn-sm btn-primary" %>
+
+
+
+		        <%=link_to "カートに入れる", public_carts_path, id: @cd.id, method: :post, class: "btn-sm btn-primary" %>
+		       <% p "===============" %>
+		        <% p @cd.id %>
+		       <% p "===============" %>
+
+
+
+
 		    </div>
 		<% if signed_in? && current_user.admin == true %>
-		    <%= link_to "CD編集", edit_admin_cd_path(@cd.id), class:"edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
-	       	<%= link_to "CD削除", admin_cd_path(@cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %><br><br>
-			<%= link_to '曲登録', new_admin_music_path, class:"new_admin_cd btn-sm btn-success" %><br><br>
+		    <%= link_to "CD編集", edit_admin_cd_path(@cd.id), class: "edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
+	       	<%= link_to "CD削除", admin_cd_path(@cd.id, :cd => {:deleated => 'true'}), method: :delete, class: "destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %><br><br>
+			<%= link_to '曲登録', new_admin_music_path, class: "new_admin_cd btn-sm btn-success" %><br><br>
 	    <% end %>
 		<h3>アーティスト</h3>
 		    <%= @cd.artist.name %>
