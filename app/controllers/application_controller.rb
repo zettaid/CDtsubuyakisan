@@ -5,19 +5,21 @@ class ApplicationController < ActionController::Base
 	helper_method :current_cart
 
 	def current_cart
-		# ログインしているかどうかで分岐がきまる。
-		if session[:id]
-			@cart = Cart.find(session[:id])
-			# if user_signed_in?
-			# 	@cart.update(user_id: current_user.id)
-			# end
-			redirect_to cart_path(@cart)
-
+	#ユーザーがログインしているかどうかの分岐
+		if current_user
+		# カートモデルのdeletedがfalse（論理削除してない）でログイン中のユーザーの場合
+			if cart = Cart.find_by(deleted: false, user_id: current_user.id)
+				# 外から見たときにcurrent_cartをcartとして使いたい。return。
+				return cart
+			else
+				# カートを作るときにユーザーのIDを設定するのはなぜか？　＝＞　リレーション（親「current_user」　子[cart]） 親ができて子ができる。
+				cart = Cart.create(user_id: current_user.id)
+				return cart
+			end
 		else
-			@cart = Cart.create(user_id: 1)
-			session[:cart_id] = @cart.id
+			# current_cartメソッドの戻り値がない状態
+			return nil
 		end
-
 	end
 
 	protected

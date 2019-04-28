@@ -37,7 +37,7 @@
 	<div id="cd-modal-artist" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-		   <h2>アーティスト名登録</h2>
+		   <h3>アーティスト名登録</h3>
 		   <%= form_for(@artist, url: admin_artists_path) do |f| %>
 		   <%= f.text_field :name, class:"artist_name col-xs-12" %>
 		   <%= f.submit "新規登録", class:"create_artist btn btn-primary col-xs-12" %>
@@ -48,7 +48,7 @@
 	<div id="cd-modal-label" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog">
 	  <div class="modal-content">
-	   <h2>レーベル名登録</h2>
+	   <h3>レーベル名登録</h3>
 	   <%= form_for(@label, url: admin_labels_path) do |f| %>
 	   <%= f.text_field :name, class:"label_name col-xs-12" %>
 	   <%= f.submit "新規登録", class:"create_label btn btn-primary col-xs-12" %>
@@ -59,7 +59,7 @@
 	<div id="cd-modal-genre" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
 		<div class="modal-content">
-		<h2>ジャンル名登録</h2>
+		<h3>ジャンル名登録</h3>
 		<%= form_for(@genre, url: admin_genres_path) do |f| %>
 		<%= f.text_field :name, class:"genre_name col-xs-12" %>
 		<%= f.submit "新規登録", class:"create_admin_genre btn btn-primary col-xs-12" %>

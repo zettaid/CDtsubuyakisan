@@ -19,31 +19,46 @@
 		<th></th>
 	</tr>
 
-<% @orders.each do |order| %>
+<% @carts.each do |cart|%>
+	<% cart.orders.each do |order| %>
 		<tr>
 			<%#<td text-align:center;><img height="80" src="<%=h item.good.image_url "/></td%> 
 			<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
 			<td text-align:center;><font size="4"><%= (order.cd.price).to_s(:delimited) %>円</font></td>
 			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
 			<td text-align:center;><font size="4"><%= (order.total_price).to_s(:delimited) %>円</font></td>
-			
+<<<<<<< HEAD
+
 			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
 			<% history = History.find_by(cart_id:order.cart_id) %>
+=======
+>>>>>>> origin
 			<!-- デフォルトのメソッドはpost -->
-			<td>
-  				<%= history.status %>
-  			</td>
 		</tr>
 
 			<!-- <td colspan="5"><font size="5">総計：<%= @sum %>円</font></td> -->
 		<%# form_with(model: history, local: true) do |form| %>
   		<%# end %>
-	
+<<<<<<< HEAD
+=======
+	<% end %>
+	<%# cart.build_history %>
+	<% if cart.history == nil %>
+	<% else %>
+	  <%= cart.history.status %>
+	<%end%>
+	<td>
+
+	</td>
+>>>>>>> origin
+
  <% end %>
+
+
+
+
 </table>
-<span>
-	<font size="5">総計：<%= @sum %>円</font>
-</span>
+
 
 
 
