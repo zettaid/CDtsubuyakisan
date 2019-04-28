@@ -15,6 +15,8 @@ class Public::CartsController < ApplicationController
 
 		end
 
+
+# cartを生成するためのアクション
 		def create
 				p "==============="
 				p params[:id]
@@ -23,7 +25,8 @@ class Public::CartsController < ApplicationController
 
 			# if @order.blank?
 			if current_cart != nil
-			   @order = current_cart.orders.build(cd_id: 1)
+
+			   @order = current_cart.orders.build(cd_id:  params[:cd][:cd_id].to_i)
 			   # todo: cd_id(hiddenフィールド)をform_forで商品詳細画面でコードを描いてもらう。
 			   	p "==============="
 				p @order
@@ -52,8 +55,9 @@ class Public::CartsController < ApplicationController
 		end
 
 		def destroy
-			# 論理削除のプロセス
+			# 注文確定後の論理削除のプロセス
 			@user = current_user
+
 			@cart = Cart.find(params[:id])
 			@cart.update(deleted: true)
 			#論理削除されユーザーに新しいカートが付与される。（今までのカートから切り替わる。）
@@ -73,8 +77,9 @@ class Public::CartsController < ApplicationController
 			redirect_to public_cart_path(@cart.id)
 		end
 
+
 		def confirm
-			@cart = current_cart
+			@cart = Cart.find(params[:cart_id])
 			@user = @cart.user
 
 
@@ -87,8 +92,8 @@ class Public::CartsController < ApplicationController
 			@history.post_number = @user.post_number
 			@history.save!
 			
-			@cart.history = @history
-			@cart.save
+			# @cart.history = @history
+			# @cart.save
 		end
 
 	
