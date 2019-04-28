@@ -86,6 +86,7 @@ class Public::CartsController < ApplicationController
 			@history.address = @user.address
 			@history.post_number = @user.post_number
 			@history.save!
+			
 			@cart.history = @history
 			@cart.save
 		end
