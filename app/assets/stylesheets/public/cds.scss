@@ -60,3 +60,25 @@
 .cd-search {
 	padding: 10px;
 }
+
+.cart-button {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding-top: 17px;
+  font-size: 15px;
+  border-radius: 5px;
+    -webkit-border-radius: 5px;/* for Safari and Chrome 対応*/
+    -moz-border-radius: 5px;/* for Firefox 対応*/
+}
+
+.cd-show-body {
+  background: linear-gradient(-45deg, rgba(99,255,255,0.3), rgba(94,255,212,0.3)) fixed, image-url('Back3.png') fixed;
+    background-size: cover;
+}
+
+.detail-link {
+  color: black;
+  margin-top: 10px;
+}
+
