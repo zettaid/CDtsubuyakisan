@@ -1,18 +1,25 @@
-<%= link_to '戻る', :back %>
-<% if signed_in? && current_user.admin == true %>
-    <%= link_to '管理者用商品一覧', admin_cds_path %>
-<% else %>
-    <%= link_to '商品一覧', public_cds_path %>
-<% end %>
+<div class="cd-show-body">
 <div class="col-xs-5 cd-image">
 	<%= attachment_image_tag @cd, :image, :fill, 500, 500, fallback:"no_image.jpg",size: '500x500' %>
 </div>
 <div class="col-xs-7">
+	<div class="detail-link">
+        <%= link_to '戻る', :back %>
+    </div>
+    <% if signed_in? && current_user.admin == true %>
+         <div class="detail-link">
+       <%= link_to '管理者用商品一覧', admin_cds_path %>
+    </div>
+    <% else %>
+    <div class="detail-link">
+        <%= link_to '商品一覧', public_cds_path %>
+    </div>
+    <% end %>
 		<h3>商品名</h3>
 		<h4><%= @cd.cd_name %></h4>
 		<% if user_signed_in? == false || @user.admin == false %>
 		    <div class="cd-detail-button">
-		        <%=link_to "カートに入れる", carts_path(@cd.id), class:"btn-sm btn-primary fas fa-shopping-cart cart-button" %>
+		        <%=link_to "カートに入れる", carts_path(@cd.id), class:"btn-primary fas fa-shopping-cart cart-button" %>
 		    </div>
 		<% end %>
 		<% if signed_in? && current_user.admin == true %>
@@ -96,4 +103,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
