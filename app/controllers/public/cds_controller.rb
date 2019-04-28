@@ -21,6 +21,8 @@ class Public::CdsController < ApplicationController
         @musics1 = @cd.musics.order("disk_number")
         @musics = @musics1.order("track")
     end
+    # @is_saved = false
+
   	# @user = current_user
   end
 

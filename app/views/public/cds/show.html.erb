@@ -71,14 +71,18 @@
     <td><%= attachment_image_tag @review, :image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
     <td><%= review.cd.cd_name %></td>
 
-     <td><%= review.text %></td>
+     <td><p><%= review.text  %></p>
+     <p><%= review.created_at.strftime('%Y/%m/%d %H:%M') %></p>
+     </td>
+
+ <% if @review.user == current_user %>
     <td>
-      <p>
-      <%= link_to "edit", edit_public_review_path(review.id) %></p>
-　　　　　　　<p><%= link_to "destroy", public_review_path(review.id), method: :delete, data: {confirm:'Are you sure?？'} %>
+      <p><%= link_to "edit", edit_public_review_path %></p>
+　　　 <p><%= link_to "destroy", public_cds_path(@cd_id), method: :delete, data: {confirm:'Are you sure?？'} %>
 
       </p>
     </td>
+    <% end %>
    </tr>
    <% end %>
 
@@ -87,20 +91,20 @@
 
 <div class="container text-center">
   <button type="button" class="btn btn-primary mt-5" data-toggle="modal" data-target="#post">つぶやきを投稿する!</button>
+
+
   <div class="modal fade" id="post" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <%= form_with model: @review, url: public_reviews_path do |f| %>
           <div class="modal-body">
-
-
             <p>新規レビュー投稿</p>
             <%= f.hidden_field :cd_id, :value => params[:id] %>
             <%= f.attachment_field :image %>
             <%= f.text_field :text, class: "form-control", placeholder: "投稿内容を入力" %>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            <button type="button" id="close_modal" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
             <%= f.submit "投稿する", class: "btn btn-primary" %>
           </div>
         <% end %>
@@ -108,4 +112,40 @@
     </div>
   </div>
 </div>
+
+<%= form_for(@cd, url: admin_cd_path) do |f| %>
+
+			<div class="edit-text">
+            	<div id="artist_button" class="edit-registration-button btn-sm btn-success">アーティスト新規登録</div><br>
+        	</div>
+<% end %>
+
+<div id="cd-modal-artist" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		   <h2>アーティスト名登録</h2>
+		   <%= form_for(@review, url: public_cds_path) do |f| %>
+		   <%= f.text_field :text, class:"artist_name col-xs-8" %>
+		   <%= f.submit "新規登録", class:"create_artist btn btn-primary" %>
+		   <% end %>
+		  </div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+		$('#artist_button').on('click', function(){
+			$('#cd-modal-artist').modal('show');
+		});
+		$('#label_button').on('click', function(){
+			$('#cd-modal-label').modal('show');
+		});
+		$('#genre_button').on('click', function(){
+			$('#cd-modal-genre').modal('show');
+		});
+	});
+</script>
+
+
+
 </div>
+

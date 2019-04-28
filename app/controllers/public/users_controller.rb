@@ -1,6 +1,9 @@
 class Public::UsersController < ApplicationController
 
 	def top
+        @reviews = Review.all
+        @genres = Genre.all
+        @shop = Shop.find(1)
     end
 
     def show

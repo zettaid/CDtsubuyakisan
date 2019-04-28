@@ -9,8 +9,21 @@ def new
 		@review = current_user.reviews.new(review_params)
 		@review.cd_id = params[:review][:cd_id].to_i
 		# review.cd_id = cd
+
 	 if @review.save
-		redirect_to public_cd_path
+		# @user = current_user
+		# @cd = Cd.find(params[:review][:cd_id])
+		# @reviews = Review.where(cd_id: @cd.id)
+  #   	if @cd.deleated == true
+  #       	redirect_to public_cds_path
+  #   	else
+  #       	@musics1 = @cd.musics.order("disk_number")
+  #       	@musics = @musics1.order("track")
+  #  		end
+  #  		@is_saved = true
+  p ""
+  		redirect_to root_path
+		# render template: "public/cds/show"
      else
       	redirect_to root_path
       end
