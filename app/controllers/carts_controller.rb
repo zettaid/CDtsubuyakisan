@@ -4,14 +4,15 @@ class CartsController < ApplicationController
 		def show
 			# if(@cart.deleted == false)
 				# @orders = @cart.orders
-				@cart = Cart.find(params[:id])
-				@orders = @cart.orders
+				# @cart = Cart.find(params[:id])
+				@orders = current_cart.orders
 				# @orders = @cart.orders
 
 		end
 
 		def create
 			if @order.blank?
+
 			   @order = current_cart.orders.build(cd_id: params[:cd_id])
 			end
 
