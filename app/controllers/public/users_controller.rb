@@ -33,7 +33,8 @@ class Public::UsersController < ApplicationController
 
     def destroy
         	@user = current_user
-            @user.destroy
+            @users = User.find(params[:format])
+            @users.destroy
             if current_user.id == @user.id || current_user.admin == true
             end
             redirect_to root_path
@@ -41,6 +42,7 @@ class Public::UsersController < ApplicationController
 
     def delete
             @user = current_user
+            @users = User.find(params[:id])
             if current_user.id == @user.id || current_user.admin == true
             end
     end
