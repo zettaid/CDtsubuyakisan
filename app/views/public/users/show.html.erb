@@ -1,11 +1,11 @@
-
-ユーザーのマイページ
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.post_number %>
-<%= @user.address %>
-<%= @user.phone_number %>
-<%= @email %>
+<div class="container">
+		<h2 class="mypage-title">マイページ</h2>
+				<div class="mypage-item"><%= @user.first_name %></div>
+				<div class="mypage-item"><%= @user.last_name %></div>
+				<div class="mypage-item"><%= @user.post_number %></div>
+				<div class="mypage-item"><%= @user.address %></div>
+				<div class="mypage-item"><%= @user.phone_number %></div>
+				<div class="mypage-item"><%= @email %></div>
 
 
 
@@ -54,9 +54,9 @@
 
 
 		<% if @user == current_user %>
-        		<%= link_to "編集", edit_public_user_path(@user.id), class: "edit_#{@user.id}" %>
+        		<%= link_to "編集", edit_public_user_path(@user.id), class:"btn-sm btn-success" %>
         <% end %>
 
         <% if @user == current_user %>
-        	   <%= link_to "退会", root_path(@user.id, :user => {:deleated => 'true'}), method: :delete,class:"destroy_#{@user.id}", "data-confirm" => "本当に退会しますか？" %>
+        	   <%= link_to "退会", user_delete_public_users_path, class:"destroy_page btn-sm btn-danger" %>
         <% end %>
