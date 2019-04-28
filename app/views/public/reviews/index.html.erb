@@ -9,6 +9,7 @@
      <td><p><%= review.text %></p>
        <p><%= review.created_at.strftime('%Y/%m/%d %H:%M') %></p>
      </td>
+     <% if review.user == current_user.id %>
     <td>
       <p>
       <%= link_to "edit", edit_public_review_path(review.id) %></p>
@@ -16,6 +17,7 @@
 
       </p>
     </td>
+   <% end %>
    </tr>
    <% end %>
 

@@ -1,7 +1,7 @@
 class Public::OrdersController < ApplicationController
 
 
-
+# cartページから数量の変更をする際に利用するアクション
 	def update
 		@order = Order.find(params[:id])
 		@order.update(order_params)
