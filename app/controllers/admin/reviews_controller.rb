@@ -24,7 +24,6 @@ class Admin::ReviewsController < ApplicationController
 
 	def index
 		@review = Review.new
-		
 	end
 
 	def update

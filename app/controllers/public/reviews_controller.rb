@@ -36,7 +36,10 @@ def new
 
 	def index
 		@user = current_user
-		@reviews = @user.reviews.all
+		@reviews = @user.reviews
+
+		# @review = Review.find(params[:id])
+		# @user = @review.user
 	end
 
 	def update
@@ -73,4 +76,7 @@ def new
     def review_params
 	 	params.require(:review).permit(:image, :text, :user_id, :cd_id, :deleated)
     end
+
+
 end
+
