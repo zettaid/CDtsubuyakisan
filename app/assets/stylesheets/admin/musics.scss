@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .music-title {
-	color: #404040;
+	color: #F5F5F5;
 	font-weight: bold;
 	text-align: center;
 	font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -11,7 +11,7 @@
 
 .music-registration {
 	text-align: center;
-	margin: 0, auto;
+	height: 70px;
 }
 
 .music-label {
@@ -53,9 +53,23 @@
 
 label {
 	font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	color: #F5F5F5;
 }
 
+.music-body {
+	background: linear-gradient(-45deg, rgba(0,34,143, .3), rgba(138,102,255, .3)) fixed, image-url('CD.jpg') fixed;
+    background-size: cover;
+    height: auto;
+}
 
+.music-link {
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
 
+.music-link a {
+  color: #F5F5F5;
+}
 
 
