@@ -20,7 +20,7 @@
 		<% if user_signed_in? == false || @user.admin == false %>
 		    <div class="cd-detail-button">
 		        <%=link_to "カートに入れる", public_carts_path, id: @cd.id,
-		         method: :post, class:"btn-sm btn-primary  fas fa-shopping-cart cart-button" %>
+		         method: :post, class:"btn-primary  fas fa-shopping-cart cart-button" %>
 		       <% p "===============" %>
 		        <% p @cd.id %>
 		       <% p "===============" %>
