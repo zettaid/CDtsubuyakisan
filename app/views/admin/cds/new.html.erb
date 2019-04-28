@@ -1,4 +1,4 @@
-<div class="cd-new-body">
+<div class="cd-new-body wrapper clearfix">
 <div class="container">
     <%= form_for(@cd, url: admin_cds_path) do |f| %>
 	<div class="registration-title"><h2>CD新規登録</h2></div>
@@ -44,7 +44,6 @@
 		   <% end %>
 		  </div>
 		</div>
-	</div>
 	<div id="cd-modal-label" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal-dialog">
 	  <div class="modal-content">
@@ -67,6 +66,7 @@
 		</div>
 	</div>
     </div>
+</div>
 </div>
 </div>
 <script>

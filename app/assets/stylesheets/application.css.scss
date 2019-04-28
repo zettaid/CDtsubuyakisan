@@ -20,22 +20,20 @@ html {
     font-size: 10px;
     -webkit-tap-highlight-color: transparent;
 }
-.navbar {
+
+.top {
     position: relative;
     min-height: 50px;
     border: 1px solid transparent;
     background-color:rgba(0,153,255,0.9);
 }
 
-.navbar-nav li a {
-	color: #fff;
-}
 
 header {
     color: white;
 }
 
-header .navbar {
+header .header-item {
     margin-bottom: 0;
 }
 
@@ -46,6 +44,7 @@ body {
     color: #333333;
     background-color: #fff;
 }
+
 .container {
     margin-right: auto;
     margin-left: auto;
@@ -54,7 +53,7 @@ body {
 }
 
 ul {
-    display: block;
+    display: inline-block;
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -66,21 +65,93 @@ ul {
     position: relative;
     display: block;
 }
+
 ul, td {
+    list-style: none;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
     line-height: 18px;
-    margin: 33px;
+    margin: 30px;
 }
 li {
     display: list-item;
     text-align: -webkit-match-parent;
-
+    float: right;
 }
+
 
 .header-link {
 	text-decoration: none;
 	color: #fff;
+}
+
+
+.timeline {
+ float: left;
+ width: 1000px;
+}
+
+.sidebar {
+  width: 230px;
+  float: right;
+}
+.sidebar-headline, .instagram-headline, .categories-headline {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+.sidebar-contents {
+  padding: 50px 0;
+}
+.popular-text, .categories-text {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 5px;
+}
+.popular-text:last-child, .categories-text:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.instagram-box {
+  float: left;
+  width: 110px;
+  padding-top: 110px;
+  background-size: cover;
+  background-position: center;
+}
+.instagram-box:nth-child(odd) {
+  margin: 0 10px 10px 0;
+}
+.instagram-box:nth-child(1) {
+  background-image: url(img/airport.jpg);
+}
+.instagram-box:nth-child(2) {
+  background-image: url(img/japan.jpg);
+}
+.instagram-box:nth-child(3) {
+  background-image: url(img/snow.jpg);
+}
+.instagram-box:nth-child(4) {
+  background-image: url(img/japan2.jpg);
+}
+.instagram-box:nth-child(5) {
+  background-image: url(img/lake.jpg);
+}
+.instagram-box:nth-child(6) {
+  background-image: url(img/road.jpg);
+}
+
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 footer {
@@ -89,7 +160,10 @@ footer {
   padding: 10px 0;
   background-color:rgba(0,153,255,0.9);
   position: absolute;
+  margin-bottom: 0;
 }
 .footer-text {
   color: #fff;
 }
+
+

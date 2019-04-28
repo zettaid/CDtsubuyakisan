@@ -1,6 +1,10 @@
 class Public::UsersController < ApplicationController
 
 	def top
+        @reviews = Review.all
+        @genres = Genre.all
+        @shop = Shop.find(1)
+        @carts = Cart.where(user_id:current_user.id,deleted: false)
     end
 
     def show
