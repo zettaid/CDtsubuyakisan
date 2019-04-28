@@ -23,7 +23,6 @@ html {
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 20px;
     border: 1px solid transparent;
     background-color:rgba(0,153,255,0.9);
 }
@@ -35,6 +34,11 @@ html {
 header {
     color: white;
 }
+
+header .navbar {
+    margin-bottom: 0;
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -47,9 +51,8 @@ body {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-    background-color:rgba(0,153,255,0.9);
-
 }
+
 ul {
     display: block;
     list-style-type: disc;
