@@ -56,7 +56,7 @@ def new
 	def destroy
    	    @review = Review.find(params[:id])
    	    @review.destroy
-   	    redirect_to "public/cds"
+   	    redirect_to root_path
     end
 
     def edit

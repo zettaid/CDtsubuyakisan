@@ -14,5 +14,125 @@
  *= require_self
  */
  	@import "bootstrap-sprockets";
-
     @import "bootstrap";
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    background-color:rgba(0,153,255,0.9);
+}
+
+.navbar-nav li a {
+	color: #fff;
+}
+
+header {
+    color: white;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:rgba(0,153,255,0.9);
+
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+
+}
+
+.header-link {
+	text-decoration: none;
+	color: #fff;
+}
+
+.timeline {
+ float: left;
+ width: 1000px;
+}
+
+.sidebar {
+  width: 230px;
+  float: right;
+}
+.sidebar-headline, .instagram-headline, .categories-headline {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+.sidebar-contents {
+  padding: 50px 0;
+}
+.popular-text, .categories-text {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 5px;
+}
+.popular-text:last-child, .categories-text:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.instagram-box {
+  float: left;
+  width: 110px;
+  padding-top: 110px;
+  background-size: cover;
+  background-position: center;
+}
+.instagram-box:nth-child(odd) {
+  margin: 0 10px 10px 0;
+}
+.instagram-box:nth-child(1) {
+  background-image: url(img/airport.jpg);
+}
+.instagram-box:nth-child(2) {
+  background-image: url(img/japan.jpg);
+}
+.instagram-box:nth-child(3) {
+  background-image: url(img/snow.jpg);
+}
+.instagram-box:nth-child(4) {
+  background-image: url(img/japan2.jpg);
+}
+.instagram-box:nth-child(5) {
+  background-image: url(img/lake.jpg);
+}
+.instagram-box:nth-child(6) {
+  background-image: url(img/road.jpg);
+}
+

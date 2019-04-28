@@ -1,11 +1,11 @@
-<div id="bg">
 <div id="nav-search" class="cd-search">
-    <%= form_tag '/admin/cds', :method => 'get' do %>
-        <p>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "Search", :cd_name => nil, class:"cd-search-button" %>
-        </p>
-    <% end %>
+        <%= form_tag '/admin/cds', :method => 'get' do %>
+            <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :cd_name => nil, class:"cd-search-button" %>
+            </p>
+        <% end %>
+</div>
     <table class="cd-table table-hover table-inverse col-xs-12">
 	<thead>
 			<tr>
@@ -31,15 +31,7 @@
 			</tr>
 		<% end %>
 	</tbody>
-    </table>
-</div>
-</div>
+</table>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="shards.js"></script>
-<script>
-(function($) {
-  $('#bg').shards([10,35,180,.15],[255,20,220,.25],[0,0,0,.25],20,.58,2,.15,true);
-})(jQuery);
-</script>
+
 

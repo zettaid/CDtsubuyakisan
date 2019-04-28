@@ -1,4 +1,5 @@
 class Admin::CdsController < ApplicationController
+  before_action :authenticate_user!
   def search
     #Viewのformで取得したパラメータをモデルに渡す
     if @cds = Cd.search(params[:search])

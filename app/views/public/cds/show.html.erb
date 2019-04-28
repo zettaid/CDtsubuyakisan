@@ -1,5 +1,5 @@
 <%= link_to '戻る', :back %>
-<% if current_user.admin == true %>
+<% if signed_in? && current_user.admin == true %>
     <%= link_to '管理者用商品一覧', admin_cds_path %>
 <% else %>
     <%= link_to '商品一覧', public_cds_path %>
@@ -9,29 +9,31 @@
 </div>
 <div class="col-xs-7">
 		<h3>商品名</h3>
-		<%= @cd.cd_name %>
+		<h4><%= @cd.cd_name %></h4>
+		<% if user_signed_in? == false || @user.admin == false %>
 		    <div class="cd-detail-button">
-		        <%=link_to "カートに入れる", public_carts_path(@cd.id), class:"btn-sm btn-primary" %>
+		        <%=link_to "カートに入れる", carts_path(@cd.id), class:"btn-sm btn-primary fas fa-shopping-cart cart-button" %>
 		    </div>
-		<% if current_user.admin == true %>
+		<% end %>
+		<% if signed_in? && current_user.admin == true %>
 		    <%= link_to "CD編集", edit_admin_cd_path(@cd.id), class:"edit_admin_cd_#{@cd.id} btn-sm btn-success" %>
 	       	<%= link_to "CD削除", admin_cd_path(@cd.id, :cd => {:deleated => 'true'}), method: :delete, class:"destroy_admin_cd_#{@cd.id} btn-sm btn-danger", "data-confirm" => "CD情報を削除します。よろしいですか？" %><br><br>
 			<%= link_to '曲登録', new_admin_music_path, class:"new_admin_cd btn-sm btn-success" %><br><br>
 	    <% end %>
 		<h3>アーティスト</h3>
-		    <%= @cd.artist.name %>
+		    <h4><%= @cd.artist.name %></h4>
 		<h3>レーベル</h3>
-		    <%= @cd.label.name %>
+		    <h4><%= @cd.label.name %></h4>
 		<h3>値段</h3>
-		    <%= @cd.price %>
+		    <h4><%= @cd.price %></h4>
 		<h3>在庫数</h3>
 		    <% if @cd.stock == 0 %>
-		    <%= image_tag('pop_sold_out.jpg', :size => '120x60') %>
+		    <%= image_tag('SOLD_OUT.jpeg', :size => '120x120') %>
 		<% else %>
-		    <%= @cd.stock %>
+		    <h4><%= @cd.stock %></h4>
 		<% end %>
 		<h3>ジャンル</h3>
-		    <%= @cd.genre.name %>
+		    <h4><%= @cd.genre.name %></h4>
 		<h3>曲一覧</h3>
 		    <% @musics.each do |musics| %>
 		<table class="detail-table table-hover table-inverse">
@@ -40,7 +42,7 @@
 				    <td>Disk.<%= musics.disk_number %></td>
 				    <td><%= musics.track %>.</td>
 				    <td><%= musics.name %></td>
-				    <% if current_user.admin == true %>
+				    <% if signed_in? && current_user.admin == true %>
 				        <td><%= link_to "曲削除", admin_music_path(musics.id), method: :delete, class:"destroy_music_#{musics.id} btn-sm btn-danger", "data-confirm" => "曲を削除します。よろしいですか？" %></td>
 				    <% end %><br>
 			    </tr>
@@ -58,7 +60,9 @@
     <td><%= attachment_image_tag @review, :image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
     <td><%= review.cd.cd_name %></td>
 
-     <td><%= review.text  %></td>
+     <td><p><%= review.text  %></p>
+     <p><%= review.created_at.strftime('%Y/%m/%d %H:%M') %></p>
+     </td>
 
  <% if @review.user == current_user %>
     <td>

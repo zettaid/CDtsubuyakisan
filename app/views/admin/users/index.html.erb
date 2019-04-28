@@ -3,7 +3,7 @@
 		<%= form_tag '/admin/users', :method => 'get' do %>
 		<p>
   				<%= text_field_tag :search, params[:search] %>
-  				<%= submit_tag '検索', :name => nil %>
+  				<%= submit_tag '検索', :first_name => nil %>
   		</p>
 		<% end %>
 
@@ -19,16 +19,17 @@
 		<% @cd_users.each do |user| %>
 		<tr>
 		        <td><%= user.first_name %><%= user.last_name %></td>
-		        <td><%= link_to '詳細' , public_user_path(user.id), class: "user_#{user.id}" %></td>
-				<% end %>
+		        <td><%= link_to '詳細' , public_user_path(user.id), class:"user_#{user.id} btn-sm btn-primary" %></td>
 
-				<% if @user == current_user %>
-		        		<td><%= link_to "編集", edit_public_user_path(@user.id), class: "edit_#{@user.id}" %></td>
+
+				<% if current_user && current_user.admin? %>
+		        		<td><%= link_to "編集", edit_public_user_path(@user. id), class:"edit_#{@user.id} btn-sm btn-success" %></td>
 		        <% end %>
 
-		        <% if @user == current_user %>
-        	   <td><%= link_to "退会", root_path(@user.id, :user => {:deleated => 'true'}), method: :delete, class:"destroy_#{@user.id}", "data-confirm" => "本当に退会しますか？" %></td>
+		        <% if current_user && current_user.admin? %>
+			    	   <td><%= link_to "退会", user_delete_public_users_path, class:"destroy_page btn-sm btn-danger" %></td>
 
+                <% end %>
         <% end %>
-       </tr>
+        </tr>
     </tbody>
