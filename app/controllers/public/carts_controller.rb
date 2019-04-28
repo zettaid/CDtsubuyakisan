@@ -4,21 +4,41 @@ class Public::CartsController < ApplicationController
 		def show
 			# if(@cart.deleted == false)
 				# @orders = @cart.orders
-				@cart = Cart.find(params[:id])
+
+				if @cart = current_cart
 				@orders = @cart.orders
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
+				else
+					redirect_to roguin_path
+				end
 
 		end
 
 		def create
-			if @order.blank?
-			   @order = current_cart.orders.build(cd_id: params[:cd_id])
+				p "==============="
+				p params[:id]
+				p current_cart
+				p "==============="
+
+			# if @order.blank?
+			if current_cart != nil
+			   @order = current_cart.orders.build(cd_id: 1)
+			   # todo: cd_id(hiddenフィールド)をform_forで商品詳細画面でコードを描いてもらう。
+			   	p "==============="
+				p @order
+				p "==============="
+				p current_cart.orders
+				p "==============="
+			else
+			redirect_to _path 
 			end
 
-			@order.quantity += params[:quantity].to_i
+			@order.quantity = 1
+			# todo: params[:quantity].to_i form_forで商品詳細画面で購入数を決めるコードを描いてもらう
+
 			@order.save
-			redirect_to current_cart
+			redirect_to public_cart_path(current_cart.id)
 		end
 
 
@@ -33,7 +53,7 @@ class Public::CartsController < ApplicationController
 
 		def destroy
 			# 論理削除のプロセス
-			@user = User.find(params[:id])
+			@user = current_user
 			@cart = Cart.find(params[:id])
 			@cart.update(deleted: true)
 			#論理削除されユーザーに新しいカートが付与される。（今までのカートから切り替わる。）
@@ -54,8 +74,9 @@ class Public::CartsController < ApplicationController
 		end
 
 		def confirm
-			@cart = Cart.find(params[:cart_id])
+			@cart = current_cart
 			@user = @cart.user
+
 
 			# historyのインスタンスを作る。
 			@history = History.new
@@ -65,6 +86,9 @@ class Public::CartsController < ApplicationController
 			@history.address = @user.address
 			@history.post_number = @user.post_number
 			@history.save!
+			
+			@cart.history = @history
+			@cart.save
 		end
 
 	

@@ -34,6 +34,11 @@ html {
 header {
     color: white;
 }
+
+header .navbar {
+    margin-bottom: 0;
+}
+
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -46,8 +51,12 @@ body {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin
 }
+
 ul {
     display: block;
     list-style-type: disc;
