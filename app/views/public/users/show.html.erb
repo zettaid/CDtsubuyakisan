@@ -26,7 +26,7 @@
 			<td text-align:center;><font size="4"><%= (order.cd.price).to_s(:delimited) %>円</font></td>
 			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
 			<td text-align:center;><font size="4"><%= (order.total_price).to_s(:delimited) %>円</font></td>
-			
+
 			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
 			<% history = History.find_by(cart_id:order.cart_id) %>
 			<!-- デフォルトのメソッドはpost -->
@@ -38,7 +38,7 @@
 			<!-- <td colspan="5"><font size="5">総計：<%= @sum %>円</font></td> -->
 		<%# form_with(model: history, local: true) do |form| %>
   		<%# end %>
-	
+
  <% end %>
 </table>
 <span>

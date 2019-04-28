@@ -23,7 +23,6 @@ html {
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 20px;
     border: 1px solid transparent;
     background-color:rgba(0,153,255,0.9);
 }
@@ -47,7 +46,6 @@ body {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-    background-color:rgba(0,153,255,0.9);
 
 }
 ul {
@@ -78,4 +76,16 @@ li {
 .header-link {
 	text-decoration: none;
 	color: #fff;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color:rgba(0,153,255,0.9);
+  position: absolute;
+  bottom: 0;
+}
+.footer-text {
+  color: #fff;
 }
