@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+    before_action :authenticate_user!
     def search
             if @cd_users = User.search(params[:search])
                 flash[:notice] = "検索結果"

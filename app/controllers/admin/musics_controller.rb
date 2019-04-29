@@ -1,4 +1,5 @@
 class Admin::MusicsController < ApplicationController
+  before_action :authenticate_user!
   def new
     if current_user.admin != true
       redirect_to public_cds_path

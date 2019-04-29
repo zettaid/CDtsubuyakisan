@@ -1,5 +1,7 @@
 <div class="wrapper clearfix">
 		<h4 class="admin-title">管理者マイページ</h4>
+		        <div class="admin-link"><%= link_to "CDショップ情報編集" , edit_admin_shop_path, class:"btn btn-warning" %></div>
 				<div class="admin-link"><%= link_to "会員一覧" , admin_users_path, class:"btn btn-warning" %></div>
 				<div class="admin-link"><%= link_to "商品一覧" , admin_cds_path, class:"btn btn-warning" %></div>
+				<div class="admin-link"><%= link_to "注文履歴一覧" , admin_histories_path, class:"btn btn-warning" %></div>
 </div>
