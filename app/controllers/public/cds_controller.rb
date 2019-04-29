@@ -3,8 +3,16 @@ class Public::CdsController < ApplicationController
     @cds = Cd.search(params[:search])
   end
 
+  def genre_search
+    @cds = Cd.genre_search(params[:search])
+  end
+
   def index
-  	@cds = Cd.search(params[:search])
+    if params[:id].present?
+  	  @cds = Cd.genre_search(params[:id])
+    else
+      @cds = Cd.search(params[:search])
+    end
   end
 
 
