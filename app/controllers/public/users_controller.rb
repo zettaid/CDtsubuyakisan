@@ -7,8 +7,6 @@ class Public::UsersController < ApplicationController
     end
 
     def show
-      
-    	   
             @user = current_user
             # user_idがcurrent_userのidで論理削除されているカートを探す。
             @carts = Cart.where(user_id: current_user.id, deleted: true)
