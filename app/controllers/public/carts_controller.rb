@@ -4,18 +4,21 @@ class Public::CartsController < ApplicationController
 		def show
 			# if(@cart.deleted == false)
 				# @orders = @cart.orders
-			redirect_to root_path if current_user.blank?
 
+				#cログインしていないユーザーの場合はトップページにいく。
+			redirect_to root_path if current_user.blank?
+				@cart = current_cart
 				@orders = @cart.orders
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
+
+				# 論理削除
 				if @cart.deleted == false
 					render :show
 				else
 					redirect_to "/"
 				end
 
-			end
 
 		end
 
@@ -38,7 +41,7 @@ class Public::CartsController < ApplicationController
 				p current_cart.orders
 				p "==============="
 			else
-			redirect_to "/" 
+			redirect_to "/"
 			end
 
 			@order.quantity = 1
@@ -97,13 +100,7 @@ class Public::CartsController < ApplicationController
 			@history.address = @user.address
 			@history.post_number = @user.post_number
 			@history.save!
-			
 			# @cart.history = @history
 			# @cart.save
 		end
-
-	
-
-
-
 end
