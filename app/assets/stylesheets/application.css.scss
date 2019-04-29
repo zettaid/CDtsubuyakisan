@@ -69,7 +69,7 @@ ul {
     display: block;
 }
 
-ul, td {
+ul {
     list-style: none;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
@@ -129,27 +129,7 @@ li {
   background-size: cover;
   background-position: center;
 }
-.instagram-box:nth-child(odd) {
-  margin: 0 10px 10px 0;
-}
-.instagram-box:nth-child(1) {
-  background-image: url(img/airport.jpg);
-}
-.instagram-box:nth-child(2) {
-  background-image: url(img/japan.jpg);
-}
-.instagram-box:nth-child(3) {
-  background-image: url(img/snow.jpg);
-}
-.instagram-box:nth-child(4) {
-  background-image: url(img/japan2.jpg);
-}
-.instagram-box:nth-child(5) {
-  background-image: url(img/lake.jpg);
-}
-.instagram-box:nth-child(6) {
-  background-image: url(img/road.jpg);
-}
+
 
 .wrapper{
     min-height: 100vh;

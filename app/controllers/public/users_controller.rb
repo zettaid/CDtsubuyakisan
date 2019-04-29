@@ -4,7 +4,9 @@ class Public::UsersController < ApplicationController
         @reviews = Review.all
         @genres = Genre.all
         @shop = Shop.find(1)
-        @carts = Cart.where(user_id:current_user.id,deleted: false)
+        if signed_in?
+          @carts = Cart.where(user_id:current_user.id,deleted: false)
+        end
     end
 
     def show
