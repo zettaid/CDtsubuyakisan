@@ -6,8 +6,6 @@ class Public::CartsController < ApplicationController
 				# @orders = @cart.orders
 			redirect_to root_path if current_user.blank?
 
-			# if @cart = Cart.find(params[:id])
-			if @cart = current_cart
 				@orders = @cart.orders
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders

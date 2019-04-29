@@ -32,10 +32,4 @@
 		</table>
 	<font size="5"colspan="6" style="text-align: center;">総計：<%= @sum %>円</font>
 	<%= link_to "商品一覧",public_cds_path %>
-	
-	<% if @sum != "0" %>
-		<%= link_to "注文確定",public_cart_path(@cart.id), method: :delete%><br>
-	<% end %>
-
-
 </div>
