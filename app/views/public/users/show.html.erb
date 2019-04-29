@@ -1,5 +1,6 @@
 <div class="container">
 		<h2 class="mypage-title">マイページ</h2>
+		
 				<div class="mypage-item"><%= @user.first_name %></div>
 				<div class="mypage-item"><%= @user.last_name %></div>
 				<div class="mypage-item"><%= @user.post_number %></div>
@@ -20,6 +21,7 @@
 	</tr>
 
 <% @carts.each do |cart|%>
+
 	<% cart.orders.each do |order| %>
 		<tr>
 			<%#<td text-align:center;><img height="80" src="<%=h item.good.image_url "/></td%> 
@@ -27,32 +29,35 @@
 			<td text-align:center;><font size="4"><%= (order.cd.price).to_s(:delimited) %>円</font></td>
 			<td text-align:center;><font size="4"><%= order.quantity %></font></td>
 			<td text-align:center;><font size="4"><%= (order.total_price).to_s(:delimited) %>円</font></td>
-<<<<<<< HEAD
+
 
 			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
 			<% history = History.find_by(cart_id:order.cart_id) %>
-=======
->>>>>>> origin
+			<td>
+				<% if cart.history.status == nil %>
+					<%= cart.history.status = 0 %>
+					<%= cart.history.status %>
+				<% else %>
+				  <%= cart.history.status %>
+				<%end%>
+			</td>
 			<!-- デフォルトのメソッドはpost -->
 		</tr>
 
-			<!-- <td colspan="5"><font size="5">総計：<%= @sum %>円</font></td> -->
 		<%# form_with(model: history, local: true) do |form| %>
   		<%# end %>
-<<<<<<< HEAD
-=======
 	<% end %>
+	<!-- cartに紐付くorders(注文商品) -->
+	<tr>
+		<td colspan="5" style="text-align: center;"><font size="4">総計：<%= @sum = cart.orders.inject(0){ |result,order|
+									 	result += order.price.to_i * order.quantity.to_i
+																		}.to_s(:delimited) %>円</font>
+		</td>
+	</tr>
 	<%# cart.build_history %>
-	<% if cart.history == nil %>
-	<% else %>
-	  <%= cart.history.status %>
-	<%end%>
-	<td>
-
-	</td>
->>>>>>> origin
 
  <% end %>
+
 
 
 

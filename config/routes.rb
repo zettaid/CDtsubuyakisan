@@ -55,7 +55,7 @@ Rails.application.routes.draw do
       collection do
         get 'search' => 'users#search'
         get 'destroy' => 'users#destroy',as: 'user_destroy'
-        get 'delete' => 'users#delete', as: 'user_delete'
+        get 'delete/:id' => 'users#delete', as: 'user_delete'
       end
     end
 
