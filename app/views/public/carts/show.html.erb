@@ -1,5 +1,6 @@
 <div class="main">
 		<table border="1">
+			
 			<tr>
 				<th>商品名</th>
 				<th>価格</th>
@@ -8,7 +9,7 @@
 				<th></th>
 				<th></th>
 			</tr>
-			
+
 			<% @cart.orders.each do |order| %>
 				<tr>
 					<td text-align:center;><font size="4"><%= order.cd.cd_name %></font></td>
@@ -30,5 +31,6 @@
 			<% end %>
 		</table>
 	<font size="5"colspan="6" style="text-align: center;">総計：<%= @sum %>円</font>
+	<%= link_to "商品一覧",public_cds_path %>
 	<%= link_to "注文確定",public_cart_path(@cart.id), method: :delete%><br>
 </div>
