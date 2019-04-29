@@ -1,7 +1,7 @@
 class Cd < ApplicationRecord
   def self.search(search) #self.でクラスメソッドとしている
     if search # Controllerから渡されたパラメータが!= nilの場合は、titleカラムを部分一致検索
-      Cd.where(deleated: 'false').where(['cd_name LIKE ?', "%#{search}%"])
+      Cd.where(deleated: 'false').where(['cd_name LIKE ?', "%#{search}%"]).where(deleated: 'genre.id')
     else
       Cd.where(deleated: 'false') #削除したもの以外全て表示。
     end
