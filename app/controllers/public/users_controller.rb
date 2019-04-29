@@ -28,7 +28,6 @@ class Public::UsersController < ApplicationController
     end
 
 	def edit
-           before_action :authenticate_user!
 	       @user = User.find(params[:id])
 		   if current_user.id == @user.id || current_user.admin == true
 		    else

@@ -34,7 +34,7 @@
                           </li>
                       <% elsif user_signed_in? && !current_user.admin? %>
                           <li class="header-right">
-                              <%= link_to 'マイページ', public_user_path(current_user.id),class: "header-link　home fas fa-home"  %>
+                              <%= link_to 'マイページ', public_user_path(current_user.id),class: "header-link fas fa-home"  %>
                           </li>
                           <li class="header-right">
                               <%= link_to 'カート', public_cart_path(current_user.id),class: "header-link fas fa-shopping-cart" %>
