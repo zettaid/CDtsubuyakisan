@@ -24,6 +24,7 @@
 		    	<% cd = Cd.new %>
 		    	<!-- 元々@cdでcdのデータがある それを基にform_forで送るとpactchメソッド(Update)と勘違いしてしまう。
 		    		本当にやりたいことはcreateのpostメソッドで送りたいので直前で空のCDモデルの変数cdをnewしている。-->
+		    	<!-- cartコントローラーのcreateアクションに飛ぶ。 -->
 		    	<%= form_for [cd], url: public_carts_path do |f| %>
 		    	<%= f.hidden_field :cd_id, :value => @cd.id %>
 		    	<%= f.submit "カートに入れる" %>

@@ -1,12 +1,13 @@
 class Public::CartsController < ApplicationController
 	# application_controller.rbで設定したcurrent_cartメソッドを呼んでいる。そこで@cartを設定しているので@cartを呼ぶ必要はない。
-
+	before_action :authenticate_user!, only: [:create]
 		def show
 			# if(@cart.deleted == false)
 				# @orders = @cart.orders
 			redirect_to root_path if current_user.blank?
 
-			if @cart = Cart.find(params[:id])
+			# if @cart = Cart.find(params[:id])
+			if @cart = current_cart
 				@orders = @cart.orders
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
