@@ -5,7 +5,7 @@ class Public::CartsController < ApplicationController
 			# if(@cart.deleted == false)
 				# @orders = @cart.orders
 			redirect_to root_path if current_user.blank?
-
+				@cart = current_cart
 				@orders = @cart.orders
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
@@ -14,9 +14,6 @@ class Public::CartsController < ApplicationController
 				else
 					redirect_to "/"
 				end
-
-			end
-
 		end
 
 
@@ -97,13 +94,7 @@ class Public::CartsController < ApplicationController
 			@history.address = @user.address
 			@history.post_number = @user.post_number
 			@history.save!
-			
 			# @cart.history = @history
 			# @cart.save
 		end
-
-	
-
-
-
 end
