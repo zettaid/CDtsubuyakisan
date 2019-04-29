@@ -1,6 +1,6 @@
 class Public::CdsController < ApplicationController
   def search
-  	@cds = Cd.search(params[:search])
+    @cds = Cd.search(params[:search])
   end
 
   def index

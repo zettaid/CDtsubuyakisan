@@ -33,6 +33,7 @@ class Admin::UsersController < ApplicationController
 
     def delete
             @user = current_user
+            user = User.find([:params])
             #会員退会ページ
     end
 

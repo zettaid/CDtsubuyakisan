@@ -14,7 +14,7 @@
 			</div><br>
             	<div id="artist_button" class="new_lebel btn-sm btn-success new-registration-button">アーティスト新規登録</div><br>
 		<div class="registration-left"><label>単価</label></div>
-			<div><%= f.text_field :price, class:"price" %> 円<br><br></div>
+			<%= f.text_field :price, class:"price" %> <label>円</label><br><br>
 		<div class="registration-left"><label>レーベル</label></div>
 		    <div class="edit-pull">
 		        <%= f.collection_select(:label_id, Label.all, :id, :name) %>
@@ -26,7 +26,7 @@
 		    </div><br>
             <div id="genre_button" class="new_lebel btn-sm btn-success new-registration-button">CDジャンル新規登録</div><br>
 		<div class="registration-left"><label>在庫数</label></div>
-			<div><%= f.text_field :stock, class:"stock" %> 個<br><br></div>
+			<%= f.text_field :stock, class:"stock" %> <label>個</label><br><br>
 		<div class="registration-button registration-left">
             <%= f.submit "新規登録", class:"create_admin_cd btn-sm btn-primary new-registration-button" %>
         </div>

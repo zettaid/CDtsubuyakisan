@@ -2,7 +2,7 @@
     <%= form_tag '/public/cds', :method => 'get' do %>
         <p>
             <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "検索", :cd_name => nil %>
+            <%= submit_tag "Search", :cd_name => nil, class:"cd-search-button" %>
         </p>
     <% end %>
 </div>

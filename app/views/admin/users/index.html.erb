@@ -24,11 +24,11 @@
 
 
 				<% if current_user && current_user.admin? %>
-		        		<td><%= link_to "編集", edit_public_user_path(@user. id), class:"edit_#{@user.id} btn-sm btn-success" %></td>
+		        		<td><%= link_to "編集", edit_public_user_path(user.id), class:"edit_#{@user.id} btn-sm btn-success" %></td>
 		        <% end %>
 
 		        <% if current_user && current_user.admin? %>
-			    	   <td><%= link_to "退会", user_delete_public_users_path, class:"destroy_page btn-sm btn-danger" %></td>
+			    	   <td><%= link_to "退会", user_delete_public_users_path(user.id), class:"destroy_page btn-sm btn-danger" %></td>
 
                 <% end %>
         <% end %>

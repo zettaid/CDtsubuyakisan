@@ -1,37 +1,48 @@
-<div class="wrapper clearfix">
 
+<div class="wrapper clearfix">
 <div class="timeline">
    <table border="1" align="left">
     <% @reviews.each do |review| %>
-
-
     <tr>
-    <td><%= attachment_image_tag @review, :image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
+    <td><%= attachment_image_tag review, :image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %></td>
     <td><%= review.cd.cd_name %></td>
 
      <td><p><%= review.text %></p>
        <p><%= review.created_at.strftime('%Y/%m/%d %H:%M') %></p>
        <p><%= review.user.first_name %></p>
      </td>
+
+     <% if user_signed_in? && review.user == current_user %>
     <td>
       <p>
       <%= link_to "edit", edit_public_review_path(review.id) %></p>
 　　　　　　　<p><%= link_to "destroy", public_review_path(review.id), method: :delete, data: {confirm:'Are you sure?？'} %>
       </p>
     </td>
+  <% end %>
    </tr>
    <% end %>
 
 </table>
 
+
+
 </div>
 
 <div class="sidebar">
+  <div id="nav-search" class="cd-search top-search">
+    <%= form_tag '/public/cds', :method => 'get' do %>
+        <p>
+            <%= text_field_tag :search, params[:search], class:"top-search-box" %>
+            <%= submit_tag "Search", :cd_name => nil, class:"cd-search-button" %>
+        </p>
+    <% end %>
+  </div>
       <section class="genre">
-        <h2 class="sidebar-headline">ジャンル</h2>
+        <h2 class="sidebar-headline"> ジャンル </h2>
         <div class="sidebar-contents">
           <% @genres.each do |genre| %>
-          <%= genre.name %>
+              <%=link_to genre.name, public_cds_path(genre.id)%><br>
           <% end %>
         </div>
       </section>
@@ -42,7 +53,7 @@
           <p><%= @shop.name %></p>
           <h3>ショップ概要</h3>
           <p><%= @shop.body %></p>
-          <h3>代表者名</h3>
+          <h3>代表者名 </h3>
           <p><%= @shop.master %></p>
           <h3>郵便番号</h3>
           <p><%= @shop.post_number %></p>
