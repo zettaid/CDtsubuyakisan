@@ -18,7 +18,7 @@
 		<h3>商品名</h3>
 		<h4><%= @cd.cd_name %></h4>
 		<% if user_signed_in? == false || @user.admin == false %>
-		    <div class="cd-detail-button cart-button">
+		    <div class="cd-detail-button">
 
 		    	<!-- form_for -->
 		    	<% cd = Cd.new %>
@@ -27,7 +27,7 @@
 		    	<!-- cartコントローラーのcreateアクションに飛ぶ。 -->
 		    	<%= form_for [cd], url: public_carts_path do |f| %>
 		    	<%= f.hidden_field :cd_id, :value => @cd.id %>
-		    	<%= f.submit "カートに入れる" %>
+		    	<%= f.submit "カートに入れる", class:"btn-sm btn-primary cart-button" %>
 		    	<% end %>
 
 
