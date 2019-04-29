@@ -21,4 +21,3 @@ Label.create(:name => 'ダークルーム')
 # Order.create(:price => 2000, :cart_id => 4, :quantity => 2, :cd_id => 2)
 # History.create(:cart_id => 1, :status => 0)
 Shop.create(:name => '石井', :body => '長野のお店です', :master => '石井', :post_number => '111-1111', :address => '長野県', :phone_number => '000-000-0000', :email => 'ijijsijiji@kk' )
-
