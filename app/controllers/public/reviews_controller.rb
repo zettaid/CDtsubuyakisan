@@ -1,6 +1,7 @@
 class Public::ReviewsController < ApplicationController
 
-def new
+    def new
+    	before_action :authenticate_user!
 		@review = Review.new
     end
 
@@ -31,6 +32,7 @@ def new
 
 
 	def edit
+		before_action :authenticate_user!
 		@review = Review.find(params[:id])
 	end
 

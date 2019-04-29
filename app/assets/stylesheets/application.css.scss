@@ -54,7 +54,7 @@ body {
     padding-right: 15px;
 }
 
-ul {
+header ul {
     display: inline-block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -63,21 +63,18 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     float: left;
+    list-style: none;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 30px;
 }
 .nav>li {
     position: relative;
     display: block;
 }
 
-ul, td {
-    list-style: none;
-    font-family: verdana, arial, helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 30px;
-    float: right;
-}
-li {
+header li {
     display: list-item;
     text-align: -webkit-match-parent;
     float: left;

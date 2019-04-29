@@ -34,7 +34,7 @@
     <%= form_tag '/public/cds', :method => 'get' do %>
         <p>
             <%= text_field_tag :search, params[:search], class:"top-search-box" %>
-            <%= submit_tag "Search", :cd_name => nil, class:"cd-search-button" %>
+            <%= submit_tag "Search", :cd_name => nil, class:"top-cd-search-button" %>
         </p>
     <% end %>
   </div>

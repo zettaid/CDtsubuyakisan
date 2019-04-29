@@ -14,13 +14,43 @@
 	height: 70px;
 }
 
+.music-registration-button ul {
+	display: inline-block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    float: left;
+    list-style: none;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 30px;
+}
+
+/*.message-box ul {
+	display: inline-block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    list-style: none;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 30px;
+}*/
+
 .music-label {
 	text-align: left;
 }
 
-.message-box {
+.message-box ul {
 	margin: auto;
-	width: 50%
+	width: 30%;
 }
 
 .messages li:nth-child(odd) {
@@ -51,7 +81,7 @@
 	color: #fff;
 }
 
-label {
+.music-registration label {
 	font-family:'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 	color: #F5F5F5;
 }
@@ -59,7 +89,7 @@ label {
 .music-body {
 	background: linear-gradient(-45deg, rgba(0,34,143, .3), rgba(138,102,255, .3)) fixed, image-url('CD.jpg') fixed;
     background-size: cover;
-    height: auto;
+    height: 700px;
 }
 
 .music-link {
@@ -71,5 +101,6 @@ label {
 .music-link a {
   color: #F5F5F5;
 }
+
 
 
