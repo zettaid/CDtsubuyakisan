@@ -34,12 +34,7 @@
 			<!-- historyモデルのcart_idでorderテーブルのcart_idと一致する最初の一件を取得 -->
 			<% history = History.find_by(cart_id:order.cart_id) %>
 			<td>
-				<% if cart.history.status == nil %>
-					<%= cart.history.status = 0 %>
-					<%= cart.history.status %>
-				<% else %>
 				  <%= cart.history.status %>
-				<%end%>
 			</td>
 			<!-- デフォルトのメソッドはpost -->
 		</tr>

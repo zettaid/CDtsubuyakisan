@@ -4,14 +4,19 @@ class Public::CartsController < ApplicationController
 		def show
 			# if(@cart.deleted == false)
 				# @orders = @cart.orders
+			redirect_to root_path if current_user.blank?
 
-				if @cart = current_cart
+			if @cart = Cart.find(params[:id])
 				@orders = @cart.orders
         		@sum = @orders.inject(0){ |result,order| result += order.price.to_i * order.quantity.to_i }.to_s(:delimited)
 				# @orders = @cart.orders
+				if @cart.deleted == false
+					render :show
 				else
-					redirect_to root_path
+					redirect_to "/"
 				end
+
+			end
 
 		end
 
@@ -34,7 +39,7 @@ class Public::CartsController < ApplicationController
 				p current_cart.orders
 				p "==============="
 			else
-			redirect_to _path 
+			redirect_to "/" 
 			end
 
 			@order.quantity = 1
@@ -57,6 +62,7 @@ class Public::CartsController < ApplicationController
 
 		def destroy
 			# 注文確定後の論理削除のプロセス
+			#binding.pry
 			@user = current_user
 
 			@cart = Cart.find(params[:id])
